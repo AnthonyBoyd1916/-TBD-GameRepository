@@ -380,7 +380,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 182888091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928d99b2c7ab3c34e8a58994e78a4747, type: 3}
+  m_Script: {fileID: 11500000, guid: 184a954bcad2bb843a717b2fae87539f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clownSpeed: 5
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 362202188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1029156ee382114aaef79dd3747c437, type: 3}
+  m_Script: {fileID: 11500000, guid: 09f5372404b0e914bb013725ec6cc8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullySpeed: 4
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 634021414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77f89d4a27a9fe64895b2c47b34729a3, type: 3}
+  m_Script: {fileID: 11500000, guid: aa049f909b911dc4a8169c9d35166935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 79fce681dda08784ca317de014a972aa, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 544190a6eaf62c54f9d66323e548affe, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1082,13 +1082,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 634021414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fff1515dc5b3be4c8ead61c909d1ff0, type: 3}
+  m_Script: {fileID: 11500000, guid: ed71ac4fcf9069d408d34bf6b413ecf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 886413120}
   defaultOrthoSize: 9
-  fearIncreaseSpeed: 0.004
-  fearDecreaseSpeed: 0.005
+  fearIncreaseSpeed: 0.002
+  fearDecreaseSpeed: 0.003
   clownFearIncrease: 0.1
   bullyFearIncrease: 0.05
   vignette: {fileID: 1454353211}
@@ -1132,7 +1132,7 @@ MonoBehaviour:
   m_Follow: {fileID: 634021422}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 9
+    OrthographicSize: 9.06
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1158,7 +1158,7 @@ Transform:
   m_GameObject: {fileID: 886413119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.020000476, y: 0.3699999, z: -10}
+  m_LocalPosition: {x: -0.020000476, y: 0.39399981, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef9b10c8da03c67479499135548f242a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 764f1b5afcfa62e4d87063f2e30b93f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1383,7 +1383,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 9.06
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1408,7 +1408,7 @@ Transform:
   m_GameObject: {fileID: 1591713710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.020000476, y: 0.3699999, z: -10}
+  m_LocalPosition: {x: -0.020000476, y: 0.39399981, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

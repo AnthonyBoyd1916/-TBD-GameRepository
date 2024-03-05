@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PicturePickup : MonoBehaviour
+public class S_PicturePickup : MonoBehaviour
 {
     [SerializeField] Image pictureFragments; // The UI element that has its sprites changed
     [SerializeField] Sprite pictureFragments0;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rendering.DebugUI;
 
-public class PlayerController : MonoBehaviour
+public class S_PlayerController : MonoBehaviour
 {
     [SerializeField] private int speed = 5;
 

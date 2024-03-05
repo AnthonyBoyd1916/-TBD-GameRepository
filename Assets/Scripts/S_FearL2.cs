@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FearL2 : MonoBehaviour
+public class S_FearL2 : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera m_Camera;
     [SerializeField] float defaultOrthoSize;
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
-    [SerializeField] float fearDecreaseSpeed = 0.003f; // Editable in the inspector
+    [SerializeField] float fearDecreaseAmount = 0.003f; // Editable in the inspector
     [SerializeField] float clownFearIncrease = 0.1f;
     [SerializeField] float bullyFearIncrease = 0.05f;
     [SerializeField] Image vignette;
@@ -52,9 +52,9 @@ public class FearL2 : MonoBehaviour
         {
             if (fear > 0.5 && fearOrthoSize > 5) // Tests if the fear is high enough and the camera is not too close
             {
-                float minLerpOrthoValue = fearOrthoSize;
+                //float minLerpOrthoValue = fearOrthoSize;
                 fearOrthoSize -= (defaultOrthoSize * fearIncreaseSpeed); // Changes the ortho size
-                float maxLerpOrthoValue = fearOrthoSize;
+                //float maxLerpOrthoValue = fearOrthoSize;
                 m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f); // Tries to smooth out the change in ortho size
             }
 

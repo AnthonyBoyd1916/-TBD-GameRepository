@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FearL3 : MonoBehaviour
+public class S_FearL3 : MonoBehaviour
 {
     // Fear script for level 3 
 

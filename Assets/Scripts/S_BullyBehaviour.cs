@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClownBehaviour : MonoBehaviour
+public class S_BullyBehaviour : MonoBehaviour
 {
-    [SerializeField] float clownSpeed = 5f; // Editable in inspector
+    [SerializeField] float bullySpeed = 4f; // Editable in inspector
 
     private Vector3 originalPosition;
     private Vector2 playerPosition;
@@ -19,11 +19,11 @@ public class ClownBehaviour : MonoBehaviour
     {
         if (playerInRange == true) // Is player in their range?
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, Time.fixedDeltaTime * clownSpeed); // Moves towards the player at full speed
+            transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, Time.fixedDeltaTime * bullySpeed); // Moves towards the player at full speed
         }
         if (playerInRange == false && this.transform.position != originalPosition) // Is player not in their range AND the clown isn't at their orignial position
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, originalPosition, Time.fixedDeltaTime * (clownSpeed/2)); // Moves back to their original spot at half speed
+            transform.position = Vector2.MoveTowards(this.transform.position, originalPosition, Time.fixedDeltaTime * (bullySpeed / 2)); // Moves back to their original spot at half speed
         }
     }
 
@@ -32,7 +32,7 @@ public class ClownBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Player") // Is the collider who entered the trigger tagged "Player"?
         {
             playerInRange = true; // Set bool to true
-            playerPosition = collision.transform.position; // Save the position of the player so the clown can rush their position
+            playerPosition = collision.transform.position; // Save the position of the player so the bully can rush their position
         }
     }
 
