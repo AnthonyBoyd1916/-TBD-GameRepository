@@ -5,7 +5,7 @@ using UnityEngine;
 public class A_StairTeleport : MonoBehaviour
 {
     [SerializeField] private GameObject stairdestination;
-    [SerializeField] private float offset = 3f;
+    [SerializeField] private float offset = 1f;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
