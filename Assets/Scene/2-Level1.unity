@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1152527326}
   defaultOrthoSize: 9
   fearIncreaseSpeed: 0.002
-  fearDecreaseAmount: 0.003
+  fearDecreaseAmount: 0.008
   vignette: {fileID: 1493120363}
 --- !u!114 &705315413
 MonoBehaviour:
@@ -335,6 +335,7 @@ Transform:
   m_Children:
   - {fileID: 1025896048}
   - {fileID: 1685722553}
+  - {fileID: 1820776803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &705315419
@@ -352,8 +353,7 @@ MonoBehaviour:
   notFlippedTorch: {fileID: 1025896046}
   flippedTorch: {fileID: 1685722551}
   torchRechargeTime: 15
-  torchCharge: 0
-  isFlipped: 0
+  torchDetector: {fileID: 1820776802}
 --- !u!1 &820721646
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +417,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.3
+  orthographic size: 9.018018
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -442,7 +442,7 @@ Transform:
   m_GameObject: {fileID: 820721646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.09220028, z: -10}
+  m_LocalPosition: {x: 0.9, y: -0.57870245, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Follow: {fileID: 705315418}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 11.3
+    OrthographicSize: 9.018018
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -757,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 1152527325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0.09220028, z: -10}
+  m_LocalPosition: {x: 0.9, y: -0.57870245, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1193,6 +1193,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 705315418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1820776802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820776803}
+  m_Layer: 0
+  m_Name: TorchDetector
+  m_TagString: TorchDetector
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1820776803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820776802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 705315418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1891317048
 GameObject:
   m_ObjectHideFlags: 0

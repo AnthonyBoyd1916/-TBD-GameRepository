@@ -10,12 +10,13 @@ public class S_TorchBehaviour : MonoBehaviour
     [SerializeField] GameObject notFlippedTorch;
     [SerializeField] GameObject flippedTorch;
     [SerializeField] float torchRechargeTime = 15;
+    [SerializeField] public  GameObject torchDetector;
     //[SerializeField] AudioClip torchWindup;
 
-    public float torchCharge;
+    [NonSerialized]public float torchCharge;
     SpriteRenderer spriteRenderer;
     //AudioSource audioSource;
-    public bool isFlipped;
+    [NonSerialized]public bool isFlipped;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class S_TorchBehaviour : MonoBehaviour
 
         flippedTorch.SetActive(false);
         notFlippedTorch.SetActive(false);
+        torchDetector.SetActive(false);
     }
 
     void Update()
@@ -38,16 +40,17 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void OnUseitem()
     {
-
         isFlipped = spriteRenderer.flipY;
 
         if (isFlipped == true && torchCharge == 1)
         {
-            FlippedTorch();            
+            FlippedTorch();
+            torchDetector.SetActive(true);
         }
         else if (isFlipped == false && torchCharge == 1)
         {
             NotFlippedTorch();
+            torchDetector.SetActive(true);
         }
     }
 
@@ -72,13 +75,12 @@ public class S_TorchBehaviour : MonoBehaviour
         Debug.Log("You hear a torch winding up");
 
         Invoke("TorchCharged", torchRechargeTime);
-
-        Debug.Log("You no longer hear a torch winding up");
     }
 
     void TorchCharged()
     {
         torchCharge = 1;
+        Debug.Log("You no longer hear a torch winding up");
     }
 
     void TorchNotCharged()
@@ -86,5 +88,6 @@ public class S_TorchBehaviour : MonoBehaviour
         torchCharge = 0;
         flippedTorch.SetActive(false);
         notFlippedTorch.SetActive(false);
+        torchDetector.SetActive(false);
     }
 }
