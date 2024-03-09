@@ -67,24 +67,24 @@ public class S_FearL1 : MonoBehaviour
 
             fear -= fearDecreaseAmount;
 
-            if (fearOrthoSize < 9) // Tests if the fear is high enough and the camera is not too close
+            if (fearOrthoSize < defaultOrthoSize) // Tests if the camera is below default ortho size
             {
                 fearOrthoSize += ((defaultOrthoSize * fearIncreaseSpeed) * 2); // Changes the ortho size
-                m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f); // Tries to smooth out the change in ortho size
+                m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Tries to smooth out the change in ortho size
             }
 
             Debug.Log(fear);
         }
+
+        else if (fear > 0 && fear < 0.5)
+        {
+            fear -= fearDecreaseAmount;
+
+            if (fearOrthoSize < defaultOrthoSize) // Tests if the camera is below default ortho size
+            {
+                fearOrthoSize += ((defaultOrthoSize * fearIncreaseSpeed) * 2); // Changes the ortho size
+                m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Tries to smooth out the change in ortho size
+            }
+        }
     }
-
-    //void OnUseItem()
-    //{
-    //    Debug.Log("Fear use item");
-    //    if (torchBehaviour.torchCharge > 0)
-    //    {
-    //        fear -= fearDecreaseAmount;
-
-    //        Debug.Log("Fear Decreased");
-    //    }
-    //}
 }
