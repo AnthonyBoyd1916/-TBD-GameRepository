@@ -78,7 +78,6 @@ public class S_FearL1 : MonoBehaviour
 
         else if (fear > 0 && fear < 0.5)
         {
-            fear -= fearDecreaseAmount;
 
             if (fearOrthoSize < defaultOrthoSize) // Tests if the camera is below default ortho size
             {
