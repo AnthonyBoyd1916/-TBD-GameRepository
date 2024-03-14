@@ -22,7 +22,7 @@ public class GameManager : PersistentSingleton<GameManager>
 {
     public GameState CurrentGameState; // current game state
     public bool GameRunning = false; // is the game running?
-    public float volume;
+    [NonSerialized]public float volume = 1f;
 
     #region Standard Unity Methods
     void Start()
