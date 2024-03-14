@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - TorchDetector
+  - Clown
+  - Bully
+  - BullyRange
+  - ClownRange
+  - Waypoint
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Useitem",
+                    "name": "UseItem",
                     "type": "Button",
                     "id": "8a495556-c743-4907-a9c9-3add15f1be51",
                     "expectedControlType": "Button",
@@ -87,7 +87,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Useitem",
+                    "action": "UseItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -38,7 +38,7 @@ public class S_TorchBehaviour : MonoBehaviour
         }
     }
 
-    void OnUseitem()
+    void OnUseItem()
     {
         isFlipped = spriteRenderer.flipY;
 
