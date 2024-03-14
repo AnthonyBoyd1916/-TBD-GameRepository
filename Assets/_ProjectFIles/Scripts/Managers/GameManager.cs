@@ -22,7 +22,7 @@ public class GameManager : PersistentSingleton<GameManager>
 {
     public GameState CurrentGameState; // current game state
     public bool GameRunning = false; // is the game running?
-    public float PlayerScore = 10; // player score
+    public float volume;
 
     #region Standard Unity Methods
     void Start()
