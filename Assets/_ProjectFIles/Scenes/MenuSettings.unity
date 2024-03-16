@@ -256,19 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f3a1af29358a6418b04c9d94f00f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVolume: {fileID: 581236625}
-  volumeLevels:
-  - {fileID: 21300000, guid: e933f3d3708f9ec44a4ac8efe8d44d82, type: 3}
-  - {fileID: 21300000, guid: 535a1d845170e06448d2c95b73e66b5e, type: 3}
-  - {fileID: 21300000, guid: 7f5db072db4f9f44a91443acdfb09890, type: 3}
-  - {fileID: 21300000, guid: 4be046d41915eba49ae76755427bd297, type: 3}
-  - {fileID: 21300000, guid: 1721640986a571042beeda571b72e14b, type: 3}
-  - {fileID: 21300000, guid: 172fc3836129d314bbdf86aee99f5d05, type: 3}
-  - {fileID: 21300000, guid: 1ec1651b870c2514baf7b37828c778a5, type: 3}
-  - {fileID: 21300000, guid: 9f0dab3aa7eaa9e46b81fdfbf3b7a52b, type: 3}
-  - {fileID: 21300000, guid: 05c0a3e1e54cca7488fc5d1611f30f9b, type: 3}
-  - {fileID: 21300000, guid: 63b78980d448e3646b2ad68976ec4095, type: 3}
-  - {fileID: 21300000, guid: 3f9a19c5d9b21ac4ab3c458c230db142, type: 3}
 --- !u!1 &272665665
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +465,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581236623}
   m_CullTransparentMesh: 1
+--- !u!1 &832858797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832858798}
+  - component: {fileID: 832858799}
+  m_Layer: 0
+  m_Name: VolumeImageChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &832858798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832858797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 872.9827, y: 561.4882, z: -3.753664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832858799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832858797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe55364270cc1a8479543ebd92511c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeLevels:
+  - {fileID: 21300000, guid: e933f3d3708f9ec44a4ac8efe8d44d82, type: 3}
+  - {fileID: 21300000, guid: 535a1d845170e06448d2c95b73e66b5e, type: 3}
+  - {fileID: 21300000, guid: 7f5db072db4f9f44a91443acdfb09890, type: 3}
+  - {fileID: 21300000, guid: 4be046d41915eba49ae76755427bd297, type: 3}
+  - {fileID: 21300000, guid: 1721640986a571042beeda571b72e14b, type: 3}
+  - {fileID: 21300000, guid: 172fc3836129d314bbdf86aee99f5d05, type: 3}
+  - {fileID: 21300000, guid: 1ec1651b870c2514baf7b37828c778a5, type: 3}
+  - {fileID: 21300000, guid: 9f0dab3aa7eaa9e46b81fdfbf3b7a52b, type: 3}
+  - {fileID: 21300000, guid: 05c0a3e1e54cca7488fc5d1611f30f9b, type: 3}
+  - {fileID: 21300000, guid: 63b78980d448e3646b2ad68976ec4095, type: 3}
+  - {fileID: 21300000, guid: 3f9a19c5d9b21ac4ab3c458c230db142, type: 3}
+  image: {fileID: 581236625}
 --- !u!1 &1155933272
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,20 +895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dceb756b37ada4c841b799c285c2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentVolume: {fileID: 581236625}
-  volumeLevels:
-  - {fileID: 21300000, guid: e933f3d3708f9ec44a4ac8efe8d44d82, type: 3}
-  - {fileID: 21300000, guid: 535a1d845170e06448d2c95b73e66b5e, type: 3}
-  - {fileID: 21300000, guid: 7f5db072db4f9f44a91443acdfb09890, type: 3}
-  - {fileID: 21300000, guid: 4be046d41915eba49ae76755427bd297, type: 3}
-  - {fileID: 21300000, guid: 1721640986a571042beeda571b72e14b, type: 3}
-  - {fileID: 21300000, guid: 172fc3836129d314bbdf86aee99f5d05, type: 3}
-  - {fileID: 21300000, guid: 1ec1651b870c2514baf7b37828c778a5, type: 3}
-  - {fileID: 21300000, guid: 9f0dab3aa7eaa9e46b81fdfbf3b7a52b, type: 3}
-  - {fileID: 21300000, guid: 05c0a3e1e54cca7488fc5d1611f30f9b, type: 3}
-  - {fileID: 21300000, guid: 63b78980d448e3646b2ad68976ec4095, type: 3}
-  - {fileID: 21300000, guid: 3f9a19c5d9b21ac4ab3c458c230db142, type: 3}
-  button: {fileID: 1366548259}
 --- !u!1 &1439579275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1063,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentGameState: 2
   GameRunning: 0
-  volume: 0
 --- !u!4 &1831834644
 Transform:
   m_ObjectHideFlags: 0
@@ -1259,3 +1288,4 @@ SceneRoots:
   - {fileID: 1439579278}
   - {fileID: 1310529890}
   - {fileID: 1982008841}
+  - {fileID: 832858798}
