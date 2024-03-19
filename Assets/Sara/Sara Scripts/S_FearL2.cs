@@ -9,7 +9,7 @@ public class S_FearL2 : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera m_Camera;
     [SerializeField] float defaultOrthoSize;
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
-    [SerializeField] float fearDecreaseAmount = 0.003f; // Editable in the inspector
+    //[SerializeField] float fearDecreaseAmount = 0.003f; // Editable in the inspector
     [SerializeField] float clownFearIncrease = 0.1f;
     [SerializeField] float bullyFearIncrease = 0.05f;
     [SerializeField] Image vignette;
