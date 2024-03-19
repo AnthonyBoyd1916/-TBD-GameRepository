@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.Rendering;
 
 public class S_QuitToMain : MonoBehaviour
 {
@@ -12,10 +11,10 @@ public class S_QuitToMain : MonoBehaviour
     private void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(OnPressPlay);
+        button.onClick.AddListener(OnQuitToMain);
     }
 
-    void OnPressPlay()
+    void OnQuitToMain()
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("MenuMain");

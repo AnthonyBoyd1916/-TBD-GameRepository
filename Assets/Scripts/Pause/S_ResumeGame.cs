@@ -18,7 +18,7 @@ public class S_ResumeGame : MonoBehaviour
 
     void OnPressResume()
     {
-        pauseMenu.SetActive(false);
         Time.timeScale = 1.0f;
+        pauseMenu.SetActive(false);
     }
 }
