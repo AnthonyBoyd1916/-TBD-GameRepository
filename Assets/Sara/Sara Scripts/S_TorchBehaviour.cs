@@ -16,7 +16,7 @@ public class S_TorchBehaviour : MonoBehaviour
     [NonSerialized]public float torchCharge;
     SpriteRenderer spriteRenderer;
     //AudioSource audioSource;
-    [NonSerialized]public bool isFlipped;
+    [NonSerialized]public bool isFlipped, torchactive;
 
     /*[SerializeField] private InputActionReference useTorch;
 
@@ -46,22 +46,33 @@ public class S_TorchBehaviour : MonoBehaviour
         if (torchCharge == 0)
         {
             ChargeTorch();
-        }      
+        }
+        if (torchCharge >= 0 && (Input.GetKeyDown(KeyCode.Q) == true))
+        {
+            OnUseitem();
+        }
+
+        /*if (torchactive == true)
+        {
+            if
+        }*/
     }
 
     void OnUseitem(/*InputAction.CallbackContext torchused*/)
     {
-        isFlipped = spriteRenderer.flipY;
+        isFlipped = spriteRenderer.flipX;
 
         if (isFlipped == true && torchCharge == 1)
         {
             FlippedTorch();
             torchDetector.SetActive(true);
+            torchactive = true;
         }
         else if (isFlipped == false && torchCharge == 1)
         {
             NotFlippedTorch();
             torchDetector.SetActive(true);
+            torchactive = true;
         }
     }
 
@@ -100,5 +111,6 @@ public class S_TorchBehaviour : MonoBehaviour
         flippedTorch.SetActive(false);
         notFlippedTorch.SetActive(false);
         torchDetector.SetActive(false);
+        torchactive = false;
     }
 }

@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1917297867}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3367,7 +3367,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3961,8 +3961,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   spriteRenderer: {fileID: 1917297873}
-  movement: {fileID: 6552991347273858556, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
-  useTorch: {fileID: 2443645757317108452, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
 --- !u!1 &1967139641
 GameObject:
   m_ObjectHideFlags: 3
