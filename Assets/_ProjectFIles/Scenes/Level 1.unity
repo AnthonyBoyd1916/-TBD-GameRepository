@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34293571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 34293573}
+  - component: {fileID: 34293572}
+  m_Layer: 0
+  m_Name: InputSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &34293572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34293571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerInputs
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!4 &34293573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34293571}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 54.607773, y: 31.484808, z: -0.7001319}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97124105
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +896,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1917297867}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -860,7 +922,7 @@ Transform:
   m_GameObject: {fileID: 537171709}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.69, y: 1.56, z: -9.978797}
+  m_LocalPosition: {x: 3.1, y: 1.66, z: -9.978797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2976,7 +3038,7 @@ Transform:
   m_GameObject: {fileID: 1473469885}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -1.55, z: 2.0392253}
+  m_LocalPosition: {x: 0.03, y: -2.02, z: 2.0392253}
   m_LocalScale: {x: 1.5094, y: 1.6484969, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3305,7 +3367,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3330,7 +3392,7 @@ Transform:
   m_GameObject: {fileID: 1539989158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.69, y: 1.56, z: -9.978797}
+  m_LocalPosition: {x: 3.1, y: 1.66, z: -9.978797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3448,7 +3510,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -3701,7 +3763,7 @@ Transform:
   m_GameObject: {fileID: 1917297866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.69, y: 1.56, z: 0.021203317}
+  m_LocalPosition: {x: 3.1, y: 1.66, z: 0.021203317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3770,8 +3832,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04025674, y: 0.030192614}
-  m_Size: {x: 1.1015162, y: 3.214994}
+  m_Offset: {x: -0.04025674, y: -0.18815947}
+  m_Size: {x: 1.1015162, y: 3.651698}
   m_Direction: 0
 --- !u!114 &1917297870
 MonoBehaviour:
@@ -3899,6 +3961,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   spriteRenderer: {fileID: 1917297873}
+  movement: {fileID: 6552991347273858556, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
+  useTorch: {fileID: 2443645757317108452, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
 --- !u!1 &1967139641
 GameObject:
   m_ObjectHideFlags: 3
@@ -29202,3 +29266,4 @@ SceneRoots:
   - {fileID: 1349590419}
   - {fileID: 214058536}
   - {fileID: 1255453678}
+  - {fileID: 34293573}

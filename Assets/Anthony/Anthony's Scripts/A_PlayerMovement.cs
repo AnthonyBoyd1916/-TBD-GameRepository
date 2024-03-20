@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class A_PlayerMovement : MonoBehaviour
 {
@@ -14,13 +15,16 @@ public class A_PlayerMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private bool onground;
 
+    //[SerializeField] private InputActionReference movement, useTorch;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        horz = Input.GetAxisRaw("Horizontal"); 
+        horz = Input.GetAxisRaw("Horizontal");
+        //horz = movement.action.ReadValue<Vector2>();
         //Jump Calculations
         if (Input.GetKeyDown(KeyCode.Space) && onground == true)
         {
