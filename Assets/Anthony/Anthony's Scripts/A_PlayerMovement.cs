@@ -41,7 +41,11 @@ public class A_PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.S) && onground == true)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = 2f;
+        }
+        else if (Input.GetKeyUp(KeyCode.S) && onground == false)
+        {
+            rb.gravityScale = 2f;
         }
         //Sprite Flip
         if (horz > 0f)

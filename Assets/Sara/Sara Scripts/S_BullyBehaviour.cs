@@ -30,6 +30,27 @@ public class S_BullyBehaviour : MonoBehaviour
         }
     }
 
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player") // Is the collider who entered the trigger tagged "Player"?
+        {
+            playerInRange = true; // Set bool to true
+            playerPosition = collision.transform.position; // Save the position of the player so the bully can rush their position
+        }
+
+        else if (collision.gameObject.tag == "Waypoint")
+        {
+            if (currentWaypointIndex == 0)
+            {
+                currentWaypointIndex = 1;
+            }
+            else if (currentWaypointIndex == 1)
+            {
+                currentWaypointIndex = 0;
+            }
+        }
+    }*/
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") // Is the collider who entered the trigger tagged "Player"?
