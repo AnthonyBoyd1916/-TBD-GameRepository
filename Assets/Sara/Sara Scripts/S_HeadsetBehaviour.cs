@@ -29,6 +29,14 @@ public class S_HeadsetBehaviour : MonoBehaviour
         musicNotes.SetActive(false);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) == true)
+        {
+            OnUseItem();
+        }
+    }
+
     void OnUseItem()
     {
         if (batteryLevel != 0 && musicPlaying == false)
