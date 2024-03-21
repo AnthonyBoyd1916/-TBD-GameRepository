@@ -20,9 +20,9 @@ public class MIND : MonoBehaviour
     void Start()
     {
         Monst1Rend = Monst1.GetComponent<SpriteRenderer>();
-        //Monst1Rend.enabled = false;
+        Monst1Rend.enabled = false;
         Monst2Rend = Monst2.GetComponent<SpriteRenderer>();
-        //Monst2Rend.enabled = false;
+        Monst2Rend.enabled = false;
     }
     void Update()
     {
@@ -37,7 +37,7 @@ public class MIND : MonoBehaviour
                 if (player.transform.position.x > Monst1.transform.position.x)
                 {
                     scale.x = Mathf.Abs(scale.x) * -1;
-                    Monst1.transform.Translate(x: (chargespeed * Time.deltaTime) + 12, y: 0, z: 0);
+                    Monst1.transform.Translate(x: (chargespeed * Time.deltaTime), y: 0, z: 0);
 
                     if (Monst1.transform.position.x <= player.transform.position.x)
                     {
@@ -53,7 +53,7 @@ public class MIND : MonoBehaviour
                 if (player.transform.position.x < Monst2.transform.position.x)
                 {                   
                     scale.x = Mathf.Abs(scale.x) * -1;
-                    Monst2.transform.Translate(x: (-chargespeed * Time.deltaTime) + 12, y: 0, z: 0);
+                    Monst2.transform.Translate(x: (-chargespeed * Time.deltaTime), y: 0, z: 0);
 
                     if (Monst2.transform.position.x <= player.transform.position.x)
                     {
