@@ -12,6 +12,7 @@ public class A_PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private GameObject pauseMenu;
     public SpriteRenderer spriteRenderer;
     private bool onground;
 
@@ -55,6 +56,12 @@ public class A_PlayerMovement : MonoBehaviour
         else if (horz < 0f)
         {
             spriteRenderer.flipX = true;
+        }
+        // Pause Menu
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
         }
     }
     private void FixedUpdate()

@@ -16,7 +16,7 @@ public class S_QuitToMain : MonoBehaviour
 
     void OnQuitToMain()
     {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene("MenuMain");
+        //Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Main");
     }
 }
