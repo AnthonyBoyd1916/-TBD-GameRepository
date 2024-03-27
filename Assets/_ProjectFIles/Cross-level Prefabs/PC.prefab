@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8031878696303503659}
   - component: {fileID: 8992550427427757562}
   - component: {fileID: 4866306045510288699}
+  - component: {fileID: 357184642198060649}
   m_Layer: 0
   m_Name: PC
   m_TagString: Player
@@ -229,7 +230,38 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  pauseMenu: {fileID: 0}
   spriteRenderer: {fileID: 8715686560643450780}
+--- !u!114 &357184642198060649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4215816949715385087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerInputs
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &4626760756124215924
 GameObject:
   m_ObjectHideFlags: 0

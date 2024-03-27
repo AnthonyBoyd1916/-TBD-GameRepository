@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &27035745
 Transform:
   m_ObjectHideFlags: 0
@@ -207,68 +207,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &34293571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 34293573}
-  - component: {fileID: 34293572}
-  m_Layer: 0
-  m_Name: InputSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &34293572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34293571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 413148fd1ec1a2744b6e85ecc7fd6e69, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerInputs
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!4 &34293573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34293571}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.607773, y: 31.484808, z: -0.7001319}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97124105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &510642713
 Transform:
   m_ObjectHideFlags: 0
@@ -7523,7 +7461,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7296057603997180465}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb273d110794b7a4a81ff8f900ec1054, type: 3}
   m_Name: 
@@ -8928,7 +8866,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2825177733793685330}
   speed: 8
   jumpingPower: 10
 --- !u!212 &3885147962823841323
@@ -11919,6 +11857,8 @@ GameObject:
   - component: {fileID: 2525022310936560948}
   - component: {fileID: 2038385711415762421}
   - component: {fileID: 8426524397829125977}
+  - component: {fileID: 8426524397829125978}
+  - component: {fileID: 8426524397829125979}
   m_Layer: 0
   m_Name: PC
   m_TagString: Player
@@ -31155,6 +31095,65 @@ MonoBehaviour:
   player: {fileID: 7296057603997180465}
   Monst1: {fileID: 27035744}
   Monst2: {fileID: 510642712}
+--- !u!114 &8426524397829125978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296057603997180465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 610aa4c21d93961428d655a59ccf3ce1, type: 3}
+  m_NotificationBehavior: 1
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3b00e872-81e5-43eb-ad4e-2d432bb12f43
+    m_ActionName: InGame/Movement[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 14f1afc3-0e89-4938-94d4-82e507ea3808
+    m_ActionName: InGame/Jump[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: InGame
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &8426524397829125979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296057603997180465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb98d94a228f9a4eae373c7cccea51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpStregth: 10
+  moveSpeed: 10
+  groundCheckDimensions: {fileID: 2341506308439972131}
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  gravScaleMultiplier: 3
+  pauseMenu: {fileID: 960431891}
+  isGrounded: 0
 --- !u!4 &8490184941559086924
 Transform:
   m_ObjectHideFlags: 0
@@ -31893,4 +31892,3 @@ SceneRoots:
   - {fileID: 1349590419}
   - {fileID: 214058536}
   - {fileID: 1255453678}
-  - {fileID: 34293573}

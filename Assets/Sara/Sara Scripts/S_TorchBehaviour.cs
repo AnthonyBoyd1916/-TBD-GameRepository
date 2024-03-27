@@ -18,17 +18,6 @@ public class S_TorchBehaviour : MonoBehaviour
     //AudioSource audioSource;
     [NonSerialized]public bool isFlipped, torchactive;
 
-    /*[SerializeField] private InputActionReference useTorch;
-
-    private void OnEnable()
-    {
-        useTorch.action.performed += OnUseitem();
-    /}
-    private void OnDisable()
-    {
-        useTorch.action.performed -= OnUseitem();
-    }*/
-
     // Start is called before the first frame update
     void Start()
     {
@@ -47,18 +36,9 @@ public class S_TorchBehaviour : MonoBehaviour
         {
             ChargeTorch();
         }
-        if (torchCharge >= 0 && (Input.GetKeyDown(KeyCode.Q) == true))
-        {
-            OnUseitem();
-        }
-
-        /*if (torchactive == true)
-        {
-            if
-        }*/
     }
 
-    void OnUseitem(/*InputAction.CallbackContext torchused*/)
+    void OnUseItem()
     {
         isFlipped = spriteRenderer.flipX;
 
