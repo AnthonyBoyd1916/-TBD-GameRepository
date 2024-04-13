@@ -10,11 +10,13 @@ TagManager:
   - BullyRange
   - ClownRange
   - Waypoint
+  - PictureAura
+  - PictureFragment
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Platform
   - Water
   - UI
   - 
