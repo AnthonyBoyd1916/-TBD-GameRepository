@@ -12,6 +12,8 @@ TagManager:
   - Waypoint
   - PictureAura
   - PictureFragment
+  - Level1
+  - Level2
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Platform
   - Water
   - UI
-  - 
+  - DeathPlatform
   - 
   - 
   - 

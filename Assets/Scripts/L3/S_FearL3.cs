@@ -13,6 +13,7 @@ public class S_FearL3 : MonoBehaviour
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
     [SerializeField] float fearDecreaseSpeed = 0.003f; // Editable in the inspector
     [SerializeField] Image vignette;
+    [SerializeField] GameObject death;
 
     private float fear;
     private float fearOrthoSize = 9;
@@ -20,12 +21,16 @@ public class S_FearL3 : MonoBehaviour
     private Color fearVignetteColor;
     private bool insidePictureAura = false;
 
+    S_DeathBehaviour deathBehaviour;
+
     void Start()
     {
         m_Camera.m_Lens.OrthographicSize = defaultOrthoSize;    // Sets the current Ortho size to be default
 
         InvokeRepeating("FearIncreaseAmbient", 1.0f, 0.1f);     // Makes the fear increase or decrease every 0.1 seconds.
         vignetteColor = vignette.GetComponent<Image>().color;   // Gets the component colour of the vignette
+
+        deathBehaviour = death.GetComponent<S_DeathBehaviour>();
     }
 
     private void Update()
@@ -82,7 +87,19 @@ public class S_FearL3 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PictureAura") // Is the collided with object tagged "Picture Aura"
+        if (collision.gameObject.tag == "Level1")
+        {
+            deathBehaviour.playerLevel = 1;
+        }
+        else if (collision.gameObject.tag == "Level2")
+        {
+            deathBehaviour.playerLevel = 2;
+        }
+        else if (collision.gameObject.tag == "Level3")
+        {
+            deathBehaviour.playerLevel = 3;
+        }
+        else if (collision.gameObject.tag == "PictureAura") // Is the collided with object tagged "Picture Aura"
         {
             insidePictureAura = true; // Set the player to be inside picture aura
         }
