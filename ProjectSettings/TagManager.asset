@@ -8,6 +8,8 @@ TagManager:
   - Bully
   - Clown
   - Ground
+  - Level2
+  - Level1
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - Jumpable
   - Water
   - UI
-  - 
+  - DeathWalkable
   - 
   - 
   - 

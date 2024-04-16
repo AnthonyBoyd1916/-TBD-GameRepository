@@ -28,10 +28,9 @@ public class S_FearL1 : MonoBehaviour
 
         globalVolume.profile.TryGet(out vignette);
         
-        //vignette = globalVolume.GetComponent<Vignette>();
 
         torchBehaviour = GetComponent<S_TorchBehaviour>(); // Gets the a reference to the script
-        fearOrthoSize = defaultOrthoSize;
+
         vignette.intensity.value = vignetteMin;
         vignetteIntensity = vignetteMin;
     }
