@@ -14,12 +14,10 @@ public class S_PlayerMovement : MonoBehaviour
 
     float sidewaysADInput;
     public bool isGrounded;
-    Vector2 movement;
-    bool onLadder;
-    SpriteRenderer spriteRenderer;
-    Rigidbody2D rb;
-    PlayerInput playerInput;
-    float normalGravScale;
+    private Vector2 movement;
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private float normalGravScale;
 
 
     void Start()
@@ -28,7 +26,6 @@ public class S_PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         normalGravScale = rb.gravityScale;
         Time.timeScale = 1f;
-        playerInput = GetComponent<PlayerInput>();
     }
 
     void Update()
@@ -42,7 +39,7 @@ public class S_PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.S))
         {
             rb.gravityScale = normalGravScale;
         }
@@ -50,26 +47,13 @@ public class S_PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!onLadder)
-        {
-            rb.velocity = new Vector2(sidewaysADInput * moveSpeed, rb.velocity.y);
-        }
-
-        else if (onLadder)
-        {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }
+        rb.velocity = new Vector2(sidewaysADInput * moveSpeed, rb.velocity.y);
     }
 
     // Uses Unity Input System
     private void OnMovement(InputValue axis)
     {
         sidewaysADInput = axis.Get<float>();
-    }
-
-    private void OnLadderMovement(InputValue value)
-    {
-        movement = value.Get<Vector2>();
     }
 
     // Unity Input System
@@ -101,25 +85,5 @@ public class S_PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheckDimensions.position, 0.2f, platformLayer);
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "Ladder" && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
-        {
-            onLadder = true;
-            rb.isKinematic = true;
-            playerInput.SwitchCurrentActionMap("InLadder");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Ladder")
-        {
-            onLadder = false;
-            rb.isKinematic = false;
-            playerInput.SwitchCurrentActionMap("InGame");
-        }
     }
 }

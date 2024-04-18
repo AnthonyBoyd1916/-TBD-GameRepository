@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class OranParallax : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class OranParallax : MonoBehaviour
     void Start()
     {
         startpos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        length = GetComponent<TilemapRenderer>().bounds.size.x;
     }
 
     // Update is called once per frame
