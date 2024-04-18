@@ -7625,7 +7625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0779e8a2643ff943bb90ece99a98c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2086523471}
   defaultOrthoSize: 6
   fearIncreaseSpeed: 0.002
   fearDecreaseSpeed: 0.003

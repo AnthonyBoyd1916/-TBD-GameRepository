@@ -7,10 +7,13 @@ public class S_VolumeDown : MonoBehaviour
 {
     Button button;
     float volumeLevel;
+    [SerializeField] GameObject image;
+    S_VolumeImageChange imageChange;
 
-    private void Start()
+    private void Awake()
     {
         button = GetComponent<Button>();
+        imageChange = image.GetComponent<S_VolumeImageChange>();
         
         volumeLevel = GameManager.Instance.volume * 10;
         
@@ -26,8 +29,9 @@ public class S_VolumeDown : MonoBehaviour
         {
             volumeLevel--;;
             GameManager.Instance.volume = volumeLevel / 10;
-            int volumeLevelInt =  Convert.ToInt32(volumeLevel);
-            S_VolumeImageChange.volume = volumeLevelInt;
+            Debug.Log("Decreased Volume to:" + volumeLevel);
+            //int volumeLevelInt =  Convert.ToInt32(volumeLevel);
+            //imageChange.volume = volumeLevelInt;
         }
     }
 }

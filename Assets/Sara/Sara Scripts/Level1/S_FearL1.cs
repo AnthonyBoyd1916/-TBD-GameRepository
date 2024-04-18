@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class S_FearL1 : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class S_FearL1 : MonoBehaviour
         InvokeRepeating("FearIncreaseAmbient", 1.0f, 0.1f);     // Makes the fear increase or decrease every 0.1 seconds.
 
         globalVolume.profile.TryGet(out vignette);
-        
+
+        GameManager.Instance.currentLevel = 1;
 
         torchBehaviour = GetComponent<S_TorchBehaviour>(); // Gets the a reference to the script
 
@@ -45,7 +47,7 @@ public class S_FearL1 : MonoBehaviour
 
     void FearIncreaseAmbient()
     {
-        if (fear < 1.2 && torchBehaviour.torchDetector.activeInHierarchy == false) // Makes sure that the game doesn't make fear climb too high over 1 (1 is the limit for ending the level)
+        if (fear < 1 && torchBehaviour.torchDetector.activeInHierarchy == false) // Makes sure that the game doesn't make fear climb too high over 1 (1 is the limit for ending the level)
         {
             if (fear > 0.5 && fearOrthoSize > 5) // Tests if the fear is high enough and the camera is not too close
             {
@@ -57,7 +59,7 @@ public class S_FearL1 : MonoBehaviour
             Debug.Log(fear); // Delete after testing
         }
 
-        else if (fear < 1.2 && torchBehaviour.torchDetector.activeInHierarchy == true)
+        else if (fear < 1 && torchBehaviour.torchDetector.activeInHierarchy == true)
         {
             Debug.Log(fear);
 
@@ -80,6 +82,11 @@ public class S_FearL1 : MonoBehaviour
                 fearOrthoSize += ((defaultOrthoSize * fearIncreaseSpeed) * 2); // Changes the ortho size
                 m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Tries to smooth out the change in ortho size
             }
+        }
+
+        else if (fear >= 1)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

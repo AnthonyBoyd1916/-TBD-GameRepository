@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class S_FearL3 : MonoBehaviour
 {
@@ -32,39 +33,25 @@ public class S_FearL3 : MonoBehaviour
         InvokeRepeating("FearIncreaseAmbient", 1.0f, 0.1f);     // Makes the fear increase or decrease every 0.1 seconds.
         globalVolume.profile.TryGet(out vignette);
 
+        GameManager.Instance.currentLevel = 3;
+
         vignette.intensity.value = vignetteMin;
         vignetteIntensity = vignetteMin;
     }
 
     private void Update()
     {
-        //if (fear < 0.25 && fear > 0)
-        //{
-        //    float colourAlphaNumber = fear/2; // Sets it so for the first quarter of the fear meter, the opacity is only half of the fear
-        //    fearVignetteColor.a = colourAlphaNumber;
-        //    fearVignetteColor.r = 1f; fearVignetteColor.b = 1f; fearVignetteColor.g = colourAlphaNumber; // Sets each of the colours to 1 as there was an issue of them all turning to 0
-        //    vignette.GetComponent<Image>().color = Color.Lerp(vignetteColor, fearVignetteColor, 0.1f); // Attempts to smooth out the opacity change
-        //}
-        //if (fear > 0.25)
-        //{
-        //    float colourAlphaNumber = fear; // Sets it so that the opacity is equal to the fear level
-        //    fearVignetteColor.a = colourAlphaNumber;
-        //    fearVignetteColor.r = 1f; fearVignetteColor.b = 1f; fearVignetteColor.g = colourAlphaNumber; // Same as above, sets colour channels to 1
-        //    vignette.GetComponent<Image>().color = Color.Lerp(vignetteColor, fearVignetteColor, 0.1f); // Same as above, tries to smooth the change
-        //}
-
         if (fear > 0.2 && fear <= 0.7 && vignetteIntensity != vignetteMax)
         {
             vignette.intensity.value = fear;
         }
-
     }
 
     void FearIncreaseAmbient()
     {
         if (insidePictureAura == false) // Is the player near a picture frame?
         {
-            if (fear < 1.2) // Makes sure that the game doesn't make fear climb too high over 1 (1 is the limit for ending the level)
+            if (fear < 1) // Makes sure that the game doesn't make fear climb too high over 1 (1 is the limit for ending the level)
             {
                 if (fear > 0.5 && fearOrthoSize > 5) // Tests if the fear is high enough and the camera is not too close
                 {
@@ -75,6 +62,11 @@ public class S_FearL3 : MonoBehaviour
                 }
 
                 fear += fearIncreaseSpeed; // Increases the fear level
+            }
+
+            else if (fear >= 1)
+            {
+                SceneManager.LoadScene("GameOver");
             }
         }
         else if (insidePictureAura == true) // Is the player near a picture frame?
