@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Level2
   - Level1
+  - Ladder
   layers:
   - Default
   - TransparentFX
