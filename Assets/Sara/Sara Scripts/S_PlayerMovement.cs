@@ -21,6 +21,8 @@ public class S_PlayerMovement : MonoBehaviour
     private float normalGravScale;
     private bool onLadder;
 
+    private Animator animator;
+
 
     void Start()
     {
@@ -46,6 +48,24 @@ public class S_PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = normalGravScale;
         }
+
+        //if (rb.velocity.x != 0f)
+        //{
+        //    animator.SetBool("IsMoving", true);
+        //}
+        //else
+        //{
+        //    animator.SetBool("IsMoving", false);
+        //}
+
+        //if (!IsGrounded())
+        //{
+        //    animator.SetBool("IsJumping", true);
+        //}
+        //else
+        //{
+        //    animator.SetBool("IsJumping", false);
+        //}
     }
 
     private void FixedUpdate()
