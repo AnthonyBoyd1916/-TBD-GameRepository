@@ -24,6 +24,7 @@ public class GameManager : PersistentSingleton<GameManager>
     public bool GameRunning = false; // is the game running?
     public float volume = 1f;
     public int currentLevel;
+    public bool headphonesActive;
 
     #region Standard Unity Methods
     void Start()

@@ -11,19 +11,33 @@ public class S_BullyBehaviour : MonoBehaviour
     private Vector2 playerPosition;
     private bool playerInRange;
     private int currentWaypointIndex = 0;
+    private bool headphonesActive; // For allowing the player to bypass the bullies and clowns
+    private int layerIgnoreBullies;
+    private int layerDefault;
 
     void Start()
     {
         originalPosition = transform.position; // Sets the original position of the NPC so they know where they were originally
+        layerIgnoreBullies = LayerMask.NameToLayer("IgnoreL2Enemies");
+        layerDefault = LayerMask.NameToLayer("Default");
     }
 
     private void FixedUpdate()
     {
-        if (playerInRange == true) // Is player in their range?
+        headphonesActive = GameManager.Instance.headphonesActive;
+        if (headphonesActive)
+        {
+            this.gameObject.layer = layerIgnoreBullies;
+        }
+        else if (!headphonesActive)
+        {
+            this.gameObject.layer = layerDefault;
+        }
+        if (playerInRange == true && !headphonesActive) // Is player in their range?
         {
             transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, Time.fixedDeltaTime * bullySpeed); // Moves towards the player at full speed
         }
-        if (playerInRange == false) // Is player not in their range AND the clown isn't at their orignial position
+        if (playerInRange == false || (playerInRange == true && headphonesActive)) // Is player not in their range AND the clown isn't at their orignial position
         {
             //transform.position = Vector2.MoveTowards(this.transform.position, originalPosition, Time.fixedDeltaTime * (bullySpeed / 2)); // Moves back to their original spot at half speed
             transform.position = Vector2.MoveTowards(this.transform.position, waypoints[currentWaypointIndex].transform.position, Time.fixedDeltaTime * (bullySpeed / 2));
@@ -53,7 +67,7 @@ public class S_BullyBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") // Is the collider who entered the trigger tagged "Player"?
+        if (collision.gameObject.tag == "Player" && !headphonesActive) // Is the collider who entered the trigger tagged "Player"?
         {
             playerInRange = true; // Set bool to true
             playerPosition = collision.transform.position; // Save the position of the player so the bully can rush their position

@@ -35,8 +35,9 @@ public class S_HeadsetBehaviour : MonoBehaviour
         {
             batteryLevel--;
 
-            musicPlaying = true;
-            musicNotes.SetActive(true);
+            musicPlaying = true;// For use within this script
+            musicNotes.SetActive(true); // To enable the animated object to show and play looping animation
+            GameManager.Instance.headphonesActive = true; // To allow clowns and bullies to ignore the player
             Invoke("MusicStop", musicLength); // Change this to be equal to the length of the audio clip or something
             Debug.Log("You hear some music playing");
             
@@ -68,6 +69,7 @@ public class S_HeadsetBehaviour : MonoBehaviour
     {
         musicPlaying = false;
         musicNotes.SetActive(false);
+        GameManager.Instance.headphonesActive = false;
         Debug.Log("You no longer hear music");
     }
 }
