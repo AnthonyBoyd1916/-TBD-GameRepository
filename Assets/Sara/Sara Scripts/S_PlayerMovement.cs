@@ -21,7 +21,7 @@ public class S_PlayerMovement : MonoBehaviour
     private float normalGravScale;
     private bool onLadder;
 
-    private Animator animator;
+    private Animator animator; // Oran's Animator Code
 
 
     void Start()
@@ -31,6 +31,8 @@ public class S_PlayerMovement : MonoBehaviour
         normalGravScale = rb.gravityScale;
         Time.timeScale = 1f;
         playerInput = GetComponent<PlayerInput>();
+
+        animator = GetComponent<Animator>(); // Needed for Oran's Animator code
     }
 
     void Update()
@@ -49,23 +51,25 @@ public class S_PlayerMovement : MonoBehaviour
             rb.gravityScale = normalGravScale;
         }
 
-        //if (rb.velocity.x != 0f)
-        //{
-        //    animator.SetBool("IsMoving", true);
-        //}
-        //else
-        //{
-        //    animator.SetBool("IsMoving", false);
-        //}
+        // Start of Oran's Code
+        if (rb.velocity.x != 0f)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
 
-        //if (!IsGrounded())
-        //{
-        //    animator.SetBool("IsJumping", true);
-        //}
-        //else
-        //{
-        //    animator.SetBool("IsJumping", false);
-        //}
+        if (!IsGrounded())
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", false);
+        }
+        // End of Oran's Code
     }
 
     private void FixedUpdate()
