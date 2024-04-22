@@ -12,6 +12,8 @@ TagManager:
   - Level1
   - Ladder
   - Battery
+  - Death Paths
+  - Death
   layers:
   - Default
   - TransparentFX

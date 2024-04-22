@@ -103,6 +103,10 @@ public class S_FearL3 : MonoBehaviour
         {
             insidePictureAura = true; // Set the player to be inside picture aura
         }
+        else if (collision.gameObject.tag == "Death") //Made By Anthony, checks for collision with Death in-game and triggers Game Over
+        {
+            fear = 1;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision) // Is the collided with object tagged "Picture Aura"
     {
