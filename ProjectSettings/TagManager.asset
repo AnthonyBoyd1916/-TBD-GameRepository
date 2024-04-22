@@ -11,6 +11,7 @@ TagManager:
   - Level2
   - Level1
   - Ladder
+  - Battery
   layers:
   - Default
   - TransparentFX
