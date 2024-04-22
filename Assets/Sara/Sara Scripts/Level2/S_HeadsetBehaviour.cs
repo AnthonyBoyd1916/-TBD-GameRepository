@@ -20,7 +20,7 @@ public class S_HeadsetBehaviour : MonoBehaviour
     [NonSerialized] public bool musicPlaying = false;
 
     int batteryLevel = 5;
-    int spareBatteries = 0;
+    //int spareBatteries = 0;
 
     private void Start()
     {

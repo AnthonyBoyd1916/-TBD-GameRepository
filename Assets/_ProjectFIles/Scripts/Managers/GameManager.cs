@@ -30,46 +30,11 @@ public class GameManager : PersistentSingleton<GameManager>
     void Start()
     {
         Debug.Log("GameManager is running"); // delete this line after testing
-        ChangeGameState(GameState.SplashScreen);
     }
 
     void Update()
     {
         Debug.Log("GameManager is updating"); // delete this line after testing
-
-        if (GameRunning) ChangeGameState(GameState.Running);
-        // Check the current game state
-        switch (CurrentGameState)
-        {
-            case GameState.SplashScreen:
-                // Do something
-                break;
-            case GameState.MainMenu:
-                // Do something
-                break;
-            case GameState.Options:
-                // Do something
-                break;
-            case GameState.Paused:
-                // Do something
-                break;
-            case GameState.Running:
-                Gameplay();
-                break;
-            case GameState.GameOver:
-                // Do something
-                break;
-        }
-    } // end of update
+    }
     #endregion
-    // Method to handle the gameplay
-    private void Gameplay()
-    {
-        throw new NotImplementedException(); // this is an exception handler in case the method is not implemented
-    }
-    // Method to change the game state
-    public void ChangeGameState(GameState newGameState)
-    {
-        CurrentGameState = newGameState;
-    }
 }

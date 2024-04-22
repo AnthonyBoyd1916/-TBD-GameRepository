@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class S_PlayerMovement : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class S_PlayerMovement : MonoBehaviour
             rb.gravityScale = normalGravScale;
         }
 
-        // Start of Oran's Code
+        #region Oran's Code
         if (rb.velocity.x != 0f)
         {
             animator.SetBool("IsMoving", true);
@@ -69,7 +70,7 @@ public class S_PlayerMovement : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
-        // End of Oran's Code
+        #endregion
     }
 
     private void FixedUpdate()
@@ -125,6 +126,14 @@ public class S_PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheckDimensions.position, 0.2f, platformLayer);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "EndLevel")
+        {
+            SceneManager.LoadScene("InterlevelCutscenes");
+        }
     }
 
     // Needed for ladder stuff
