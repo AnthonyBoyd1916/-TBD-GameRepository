@@ -12,18 +12,23 @@ TagManager:
   - Battery
   - Death Paths
   - Death
-  - Trigger 1
-  - Trigger 2
-  - Trigger 3
-  - Trigger 4
-  - Trigger 5
-  - Trigger 6
-  - Trigger 7
-  - Trigger 8
-  - Trigger 9
-  - Trigger 10
-  - Trigger 11
-  - Trigger 12
+  - L1West
+  - L1MidWest
+  - L1Mid
+  - L1MidEast
+  - L1East
+  - L2West
+  - L2East
+  - L2b
+  - L3WWest
+  - L3WEast
+  - L3Wb
+  - L3EWest
+  - L3EEast
+  - L4West
+  - L4East
+  - Level2
+  - Level1
   layers:
   - Default
   - TransparentFX
