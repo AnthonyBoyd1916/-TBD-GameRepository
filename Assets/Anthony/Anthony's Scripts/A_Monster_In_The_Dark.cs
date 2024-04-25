@@ -59,6 +59,7 @@ public class A_Monster_In_The_Dark : MonoBehaviour
             chargespeed = 0f;
             monsterinlevel = false;
             controltimer = true;
+            torchlightflashed = false;
         }
     }
 
