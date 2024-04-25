@@ -3383,7 +3383,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12252617, y: 1.0691566}
+  m_Offset: {x: -0.18518066, y: 2.2120695}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3394,7 +3394,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.596531, y: 6.43534}
+  m_Size: {x: 12.376938, y: 8.721166}
   m_EdgeRadius: 0
 --- !u!4 &299458902
 Transform:
@@ -11805,7 +11805,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05c47cd7207e7fa43a53f51e73813eab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11829,7 +11829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  inputspeed: 0
+  inputspeed: 5
   player: {fileID: 7296057603997180465}
   IdleSpawnPos: {fileID: 2000407965}
   RightSpawnPos: {fileID: 152388183}
@@ -46977,9 +46977,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 537171710}
+  defaultOrthoSize: 0
   fearIncreaseSpeed: 0.002
   fearDecreaseAmount: 0.002
   globalVolume: {fileID: 1110277106}
+  fearOrthoSize: 0
 --- !u!114 &8426524397829125978
 MonoBehaviour:
   m_ObjectHideFlags: 0

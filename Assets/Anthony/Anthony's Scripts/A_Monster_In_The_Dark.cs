@@ -5,32 +5,32 @@ using UnityEngine;
 public class A_Monster_In_The_Dark : MonoBehaviour
 {
     [SerializeField] private float timer = 10f;
-    private float chargespeed = 1f;
+    private float chargespeed = 0f;
     private float randomizedtimer, standintimer = 500f;
     [SerializeField] private float inputspeed;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform IdleSpawnPos;
     [SerializeField] private Transform RightSpawnPos;
     [SerializeField] private Transform LeftSpawnPos;
-    private bool monsteractive = false, controltimer = true, torchlightflashed = false, monsterinlevel = false;
+    private bool monsteractive = false, controltimer = true, torchlightflashed = false, monsterinlevel = false, monsterspawned = false;
 
     
     //============================================================================================
     void Start()
     {
-        
+        SetRandomTimer();
     }
 
     // Update is called once per frame
     void Update()
     {
         timer = timer - 0.01f;
-        //---------------Manages Timer according to whether the monster is active---------------//
-        if (monsteractive == false) 
+        if (timer <= 0f)
         {
-            NonActiveTimer();
+            monsteractive = true;
         }
-        else if ( monsteractive == true && controltimer == true)
+        //---------------Manages Timer according to whether the monster is active---------------//       
+        if ( monsteractive == true && controltimer == true)
         {
             SetRandomTimer();
             controltimer = false;
@@ -39,13 +39,20 @@ public class A_Monster_In_The_Dark : MonoBehaviour
         if (timer > 0f && monsteractive == true)
         {
             transform.position = IdleSpawnPos.position;
-            chargespeed = 0f;
+            chargespeed = 1f;
         }
-        if (timer == 0f && monsteractive == true)
+        /*else if (timer == 0f && monsteractive == true)
         {
-            transform.position = RightSpawnPos.position;
+            transform.position = RightSpawnPos.position;           
+        }*/
+        else if (timer < 0f && monsteractive == true)
+        {
             monsterinlevel = true;
+            monsterspawned = true;
+            TeleportMonster();
+            monsterspawned = false;
             SetCooldown();
+            NonActiveTimer();
         }
         //---------------Manages Monster Follow and being Flashed---------------//
         if (monsterinlevel == true && torchlightflashed == false)
@@ -60,6 +67,7 @@ public class A_Monster_In_The_Dark : MonoBehaviour
             monsterinlevel = false;
             controltimer = true;
             torchlightflashed = false;
+            monsteractive = false;
         }
     }
 
@@ -76,7 +84,13 @@ public class A_Monster_In_The_Dark : MonoBehaviour
         randomizedtimer = Random.Range(5f, 15f);
         timer = randomizedtimer;
     }
-
+    void TeleportMonster()
+    {
+        if(monsterspawned == true)
+        {
+            transform.position = RightSpawnPos.position;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Flashlight")
