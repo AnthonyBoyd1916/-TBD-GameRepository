@@ -26,6 +26,7 @@ TagManager:
   - Trigger 12
   - Level2
   - Level1
+  - EndLevel
   layers:
   - Default
   - TransparentFX

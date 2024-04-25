@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ProjectFIles/Scenes/GameOver.unity
     guid: e5e2ae577bc41194e960e68d06fac5b7
+  - enabled: 1
+    path: Assets/_ProjectFIles/Scenes/InterlevelCutscenes.unity
+    guid: f3420086ec8ea5f45b2078a5a6c69424
   m_configObjects: {}

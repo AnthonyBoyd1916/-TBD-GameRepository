@@ -11,12 +11,13 @@ public class S_Play : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.currentLevel = 0;
         button = GetComponent<Button>();
         button.onClick.AddListener(OnPressPlay);
     }
 
     void OnPressPlay()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("InterlevelCutscenes");
     }
 }
