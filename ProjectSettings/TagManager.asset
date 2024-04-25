@@ -31,6 +31,8 @@ TagManager:
   - L1MidWest
   - L1MidEast
   - Undefined
+  - Flashlight
+  - Monster
   layers:
   - Default
   - TransparentFX

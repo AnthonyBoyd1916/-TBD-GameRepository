@@ -50,7 +50,7 @@ public class S_FearL1 : MonoBehaviour
     {
         if (fear < 1 && torchBehaviour.torchDetector.activeInHierarchy == false) // Makes sure that the game doesn't make fear climb too high over 1 (1 is the limit for ending the level)
         {
-            if (fear > 0.5 && fearOrthoSize > 4) // Tests if the fear is high enough and the camera is not too close
+            if (fear > 0.5 && fearOrthoSize > 5) // Tests if the fear is high enough and the camera is not too close
             {
                 fearOrthoSize -= (defaultOrthoSize * fearIncreaseSpeed); // Changes the ortho size
                 m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f); // Tries to smooth out the change in ortho size
@@ -86,6 +86,13 @@ public class S_FearL1 : MonoBehaviour
         else if (fear >= 1)
         {
             SceneManager.LoadScene("GameOver");
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision) //Added by Anthony
+    {
+        if (collision.tag == "Monster")
+        {
+            fear = 1;
         }
     }
 }
