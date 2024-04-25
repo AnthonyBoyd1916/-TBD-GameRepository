@@ -9,22 +9,23 @@ using UnityEngine.SceneManagement;
 public class S_FearL1 : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera m_Camera;
-    float defaultOrthoSize = 6;
+    [SerializeField] float defaultOrthoSize;
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
     [SerializeField] float fearDecreaseAmount = 0.002f; // Editable in the inspector
     [SerializeField] Volume globalVolume;
 
     private float fear;
-    private float fearOrthoSize;
+    [SerializeField] private float fearOrthoSize;
     private float vignetteMin = 0.2f;
     private float vignetteIntensity;
-    private float vignetteMax = 0.7f;
+    private float vignetteMax = 0.65f;
     S_TorchBehaviour torchBehaviour;
     Vignette vignette;
 
     void Start()
     {
-        m_Camera.m_Lens.OrthographicSize = defaultOrthoSize;    // Sets the current Ortho size to be default
+        defaultOrthoSize = m_Camera.m_Lens.OrthographicSize;    // Sets the current Ortho size to be default
+        fearOrthoSize = defaultOrthoSize;
         InvokeRepeating("FearIncreaseAmbient", 1.0f, 0.1f);     // Makes the fear increase or decrease every 0.1 seconds.
 
         globalVolume.profile.TryGet(out vignette);
@@ -49,7 +50,7 @@ public class S_FearL1 : MonoBehaviour
     {
         if (fear < 1 && torchBehaviour.torchDetector.activeInHierarchy == false) // Makes sure that the game doesn't make fear climb too high over 1 (1 is the limit for ending the level)
         {
-            if (fear > 0.5 && fearOrthoSize > 5) // Tests if the fear is high enough and the camera is not too close
+            if (fear > 0.5 && fearOrthoSize > 4) // Tests if the fear is high enough and the camera is not too close
             {
                 fearOrthoSize -= (defaultOrthoSize * fearIncreaseSpeed); // Changes the ortho size
                 m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f); // Tries to smooth out the change in ortho size

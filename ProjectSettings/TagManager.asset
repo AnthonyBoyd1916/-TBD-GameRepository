@@ -29,6 +29,7 @@ TagManager:
   - L4East
   - Level2
   - Level1
+  - EndLevel
   layers:
   - Default
   - TransparentFX
