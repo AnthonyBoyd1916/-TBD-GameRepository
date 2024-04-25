@@ -25,7 +25,7 @@ public class S_FearL1 : MonoBehaviour
     void Start()
     {
         defaultOrthoSize = m_Camera.m_Lens.OrthographicSize;    // Sets the current Ortho size to be default
-        fearOrthoSize = defaultOrthoSize;
+        fearOrthoSize = defaultOrthoSize; 
         InvokeRepeating("FearIncreaseAmbient", 1.0f, 0.1f);     // Makes the fear increase or decrease every 0.1 seconds.
 
         globalVolume.profile.TryGet(out vignette);
@@ -70,9 +70,7 @@ public class S_FearL1 : MonoBehaviour
             {
                 fearOrthoSize += ((defaultOrthoSize * fearIncreaseSpeed) * 2); // Changes the ortho size
                 m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Tries to smooth out the change in ortho size
-            }
-
-            Debug.Log(fear);
+            };
         }
 
         else if (fear > 0 && fear < 0.5)

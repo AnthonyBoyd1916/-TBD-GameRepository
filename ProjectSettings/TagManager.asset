@@ -15,6 +15,22 @@ TagManager:
   - Level2
   - Level1
   - EndLevel
+  - L4East
+  - L4West
+  - L2East
+  - L1East
+  - L1West
+  - L3WWest
+  - L3Wb
+  - L2West
+  - L3EWest
+  - L1Mid
+  - L3WEast
+  - L2b
+  - L3EEast
+  - L1MidWest
+  - L1MidEast
+  - Undefined
   layers:
   - Default
   - TransparentFX
