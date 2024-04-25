@@ -24,6 +24,7 @@ public class S_FearL3 : MonoBehaviour
     private float vignetteIntensity;
     private float vignetteMax = 0.7f;
     private bool insidePictureAura = false;
+    S_DeathBehaviour deathBehaviour;
     Vignette vignette;
 
     void Start()
@@ -34,6 +35,8 @@ public class S_FearL3 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         GameManager.Instance.currentLevel = 3;
+
+        deathBehaviour = death.GetComponent<S_DeathBehaviour>();
 
         vignette.intensity.value = vignetteMin;
         vignetteIntensity = vignetteMin;
@@ -87,25 +90,81 @@ public class S_FearL3 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Level1")
-        {
-            //deathBehaviour.playerLevel = 1;
-        }
-        else if (collision.gameObject.tag == "Level2")
-        {
-            //deathBehaviour.playerLevel = 2;
-        }
-        else if (collision.gameObject.tag == "Level3")
-        {
-            //deathBehaviour.playerLevel = 3;
-        }
-        else if (collision.gameObject.tag == "PictureAura") // Is the collided with object tagged "Picture Aura"
+        if (collision.gameObject.tag == "PictureAura") // Is the collided with object tagged "Picture Aura"
         {
             insidePictureAura = true; // Set the player to be inside picture aura
         }
         else if (collision.gameObject.tag == "Death") //Made By Anthony, checks for collision with Death in-game and triggers Game Over
         {
             fear = 1;
+        }
+        else
+        {
+            switch (collision.gameObject.tag)
+            {
+                case "L1West":
+                    deathBehaviour.playerLevel = 1; // 1 is used for Level1
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L1MidWest":
+                    deathBehaviour.playerLevel = 1; // 1 is used for Level1
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L1Mid":
+                    deathBehaviour.playerLevel = 1; // 1 is used for Level1
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L1MidEast":
+                    deathBehaviour.playerLevel = 1; // 1 is used for Level1
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L1East":
+                    deathBehaviour.playerLevel = 1; // 1 is used for Level1
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L2East":
+                    deathBehaviour.playerLevel = 2; // 2 is used for Level2
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L2West":
+                    deathBehaviour.playerLevel = 2; // 2 is used for Level2
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L2b":
+                    deathBehaviour.playerLevel = 6;// 6 is used for Level2b
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L3WWest":
+                    deathBehaviour.playerLevel = 3; // 3 is used for Level3West
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L3WEast":
+                    deathBehaviour.playerLevel = 3; // 3 is used for Level3West
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L3Wb":
+                    deathBehaviour.playerLevel = 7; // 7 is used for Level3b
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L3EWest":
+                    deathBehaviour.playerLevel = 4; // 4 is used for Level3East
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L3EEast":
+                    deathBehaviour.playerLevel = 4; // 4 is used for Level3East
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L4West":
+                    deathBehaviour.playerLevel = 5; // 5 is used for Level4
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                case "L4East":
+                    deathBehaviour.playerLevel = 5; // 5 is used for Level4
+                    deathBehaviour.playerTiggerLoc = collision.tag;
+                    break;
+                default:
+                    break;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision) // Is the collided with object tagged "Picture Aura"
