@@ -90,7 +90,7 @@ public class S_FearL1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) //Added by Anthony
     {
-        if (collision.tag == "Monster")
+        if (collision.tag == "Monster" && torchBehaviour.torchactive == false)
         {
             fear = 1;
         }
