@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class S_SkipCutscene : MonoBehaviour
 {
@@ -12,15 +13,17 @@ public class S_SkipCutscene : MonoBehaviour
     [SerializeField] GameObject preLevel3Cutscene;
     [SerializeField] GameObject postLevel3Cutscene;
     [SerializeField] GameObject endingCutscene;*/
+    [SerializeField] TMPro.TextMeshPro tip;
 
     int prevLevel;
-    bool secondCutscenePlayed;
+    bool buttonPressed;
 
 
     void Start()
     {
+        tip.gameObject.SetActive(false);
         prevLevel = GameManager.Instance.currentLevel;
-        secondCutscenePlayed = false;
+        buttonPressed = false;
         switch (prevLevel)
         {
             case 0:
@@ -44,36 +47,62 @@ public class S_SkipCutscene : MonoBehaviour
         {
             if (prevLevel == 0)
             {
-                SceneManager.LoadScene("Level 1");
+                tip.gameObject.SetActive(true);
+                tip.text = "Press Q to use your torch and scare away the monster";
+                Invoke("LoadLevel1", 3);
             }
             else if (prevLevel == 1)
             {
-                if (!secondCutscenePlayed)
+                if (!buttonPressed)
                 {
                     //gameObject.SetActive(preLevel2Cutscene);
-                    secondCutscenePlayed = true;
+                    buttonPressed = true;
                 }
                 else
                 {
-                    SceneManager.LoadScene("Level 2");
+                    tip.gameObject.SetActive(true);
+                    tip.text = "Press Q to use your headphones and block out the laughter";
+                    Invoke("LoadLevel2", 3);
                 }
             }
             else if (prevLevel == 2)
             {
-                SceneManager.LoadScene("Level 3");
+                tip.gameObject.SetActive(true);
+                tip.text = "Being near pictures might make you feel better";
+                Invoke("LoadLevel3", 3);
             }
             else if (prevLevel == 3)
             {
-                if(!secondCutscenePlayed)
+                if(!buttonPressed)
                 {
                     //gameObject.SetActive(secondCutscenePlayed);
-                    secondCutscenePlayed = true;
+                    buttonPressed = true;
                 }
                 else
                 {
-                    SceneManager.LoadScene("MainMenu");
+                    LoadMainMenu();
                 }
             }
         }
+    }
+
+    private void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+    private void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
+    private void LoadLevel3()
+    {
+        SceneManager.LoadScene("Level 3");
+    }
+
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
