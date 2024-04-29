@@ -8,8 +8,8 @@ using UnityEngine.Video;
 
 public class S_SkipCutscene : MonoBehaviour
 {
-    /*[SerializeField] VideoPlayer openingCutscene;
-    [SerializeField] VideoPlayer postLevel1Cutscene;
+    [SerializeField] VideoPlayer openingCutscene;
+    /*[SerializeField] VideoPlayer postLevel1Cutscene;
     [SerializeField] VideoPlayer preLevel2Cutscene;
     [SerializeField] VideoPlayer preLevel3Cutscene;*/
     [SerializeField] VideoPlayer postLevel3Cutscene;
@@ -28,8 +28,8 @@ public class S_SkipCutscene : MonoBehaviour
         switch (prevLevel)
         {
             case 0:
-                //openingCutscene.gameObject.SetActive(true);
-                //openingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
+                openingCutscene.gameObject.SetActive(true);
+                openingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 1:
                 //postLevel1Cutscene.gameObject.SetActive(true);
