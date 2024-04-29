@@ -28,19 +28,19 @@ public class S_SkipCutscene : MonoBehaviour
         switch (prevLevel)
         {
             case 0:
-                //gameObject.SetActive(openingCutscene);
+                //openingCutscene.gameObject.SetActive(true);
                 //openingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 1:
-                //gameObject.SetActive(postLevel1Cutscene);
+                //postLevel1Cutscene.gameObject.SetActive(true);
                 //postLevel1Cutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 2:
-                //gameObject.SetActive(preLevel3Cutscene);
+                //preLevel3Cutscene.gameObject.SetActive(true);
                 //preLevel3Cutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 3:
-                gameObject.SetActive(postLevel3Cutscene);
+                postLevel3Cutscene.gameObject.SetActive(true);
                 postLevel3Cutscene.SetDirectAudioVolume(0,GameManager.Instance.volume);
                 break;
         }
@@ -60,7 +60,8 @@ public class S_SkipCutscene : MonoBehaviour
             {
                 if (!buttonPressed)
                 {
-                    //gameObject.SetActive(preLevel2Cutscene);
+                    //postLevel1Cutscene.gameObject.SetActive(false);
+                    //preLevel2Cutscene.gameObject.SetActive(true);
                     //preLevel2Cutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                     buttonPressed = true;
                 }
@@ -81,7 +82,8 @@ public class S_SkipCutscene : MonoBehaviour
             {
                 if(!buttonPressed)
                 {
-                    //gameObject.SetActive(endingCutscene);
+                    postLevel3Cutscene.gameObject.SetActive(false);
+                    //endingCutscene.gameObject.SetActive(true);
                     //endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                     buttonPressed = true;
                 }
@@ -110,6 +112,6 @@ public class S_SkipCutscene : MonoBehaviour
 
     private void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main");
     }
 }
