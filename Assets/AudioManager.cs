@@ -5,12 +5,29 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance;
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
-    public void PlayMusic(string Name)
+    public void Awake()
     {
-        Sound s = Array.Find(musicSounds, x => x.Name == Name);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void Start()
+    {
+        PlayMusic("ClockTick");
+    }
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
 
         if (s != null)
         {
@@ -24,9 +41,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX(string Name)
+    public void PlaySFX(string name)
     {
-        Sound s = Array.Find(sfxSounds, x => x.Name == Name);
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
 
         if (s == null)
         {
