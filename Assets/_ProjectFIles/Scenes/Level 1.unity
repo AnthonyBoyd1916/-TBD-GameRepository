@@ -11979,7 +11979,9 @@ MonoBehaviour:
   MusicSounds:
   - name: Clock
     clip: {fileID: 8300000, guid: d7de6d7cb5e841344aec07952a3c8c67, type: 3}
-  SfxSounds: []
+  SfxSounds:
+  - name: Walk
+    clip: {fileID: 8300000, guid: 475f9ec04224b9e40ae4b01b3677665b, type: 3}
   MusicSource: {fileID: 1843209695}
   SfxSource: {fileID: 1710324300}
 --- !u!4 &984417342
@@ -20517,13 +20519,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 155
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -49787,6 +49789,7 @@ MonoBehaviour:
   gravScaleMultiplier: 3
   pauseMenu: {fileID: 960431891}
   isGrounded: 0
+  walkInterval: 0.25
 --- !u!4 &8490184941559086924
 Transform:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class S_PlayerMovement : MonoBehaviour
 
     private Animator animator; // Oran's Animator Code
 
+    private float walkIntervalTimer;
+    public float walkInterval = 0.25f;
 
     void Start()
     {
@@ -79,6 +81,11 @@ public class S_PlayerMovement : MonoBehaviour
         if (!onLadder) // If not on ladder, move with the sideways input
         {
             rb.velocity = new Vector2(sidewaysADInput * moveSpeed, rb.velocity.y);
+            if (rb.velocity.x > 0.05f || rb.velocity.x < -0.05f)
+            {
+                WalkAudio(); // interval function to play footsteps
+            }
+            
         }
         else if (onLadder) // If on ladder, move with the input from the ladder
         {
@@ -133,6 +140,18 @@ public class S_PlayerMovement : MonoBehaviour
         if (collision.tag == "EndLevel")
         {
             SceneManager.LoadScene("InterlevelCutscenes");
+        }
+    }
+
+    //Audio - footstep interval
+    private void WalkAudio()
+    {
+        walkIntervalTimer += Time.deltaTime;
+        if(walkIntervalTimer>walkInterval)
+        {
+            walkIntervalTimer = 0;
+            Debug.Log(" play a walk footstep ");
+            AudioManager.Instance.PlaySFX("Walk");
         }
     }
 
