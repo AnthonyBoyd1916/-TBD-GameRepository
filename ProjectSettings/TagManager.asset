@@ -33,6 +33,7 @@ TagManager:
   - Undefined
   - Flashlight
   - Monster
+  - EndL1Sound
   layers:
   - Default
   - TransparentFX

@@ -6,8 +6,8 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] musicSounds, sfxSounds;
-    public AudioSource musicSource, sfxSource;
+    public Sound[] MusicSounds, SfxSounds;
+    public AudioSource MusicSource, SfxSource;
 
     public void Awake()
     {
@@ -23,27 +23,28 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        PlayMusic("ClockTick");
+        PlayMusic("Clock");
     }
+
     public void PlayMusic(string name)
     {
-        Sound s = Array.Find(musicSounds, x => x.name == name);
 
-        if (s != null)
+        Sound s = Array.Find(MusicSounds, x => x.name == name);
+        if (s == null)
         {
             Debug.Log("Sound Not Found");
         }
 
         else
         {
-            musicSource.clip = s.clip;
-            musicSource.Play();
+            MusicSource.clip = s.clip;
+            MusicSource.Play();
         }
     }
 
     public void PlaySFX(string name)
     {
-        Sound s = Array.Find(sfxSounds, x => x.name == name);
+            Sound s = Array.Find(SfxSounds, x => x.name == name);
 
         if (s == null)
         {
@@ -52,8 +53,10 @@ public class AudioManager : MonoBehaviour
 
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            SfxSource.PlayOneShot(s.clip);
         }
     }
+
+
 
 }
