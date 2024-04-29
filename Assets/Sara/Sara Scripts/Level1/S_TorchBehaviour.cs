@@ -9,13 +9,11 @@ public class S_TorchBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject notFlippedTorch;
     [SerializeField] GameObject flippedTorch;
-    [SerializeField] float torchRechargeTime = 15;
+    [SerializeField] float torchRechargeTime = 10;
     [SerializeField] public  GameObject torchDetector;
-    //[SerializeField] AudioClip torchWindup;
 
     [NonSerialized]public float torchCharge;
     SpriteRenderer spriteRenderer;
-    //AudioSource audioSource;
     [NonSerialized]public bool isFlipped, torchactive;
 
     // Start is called before the first frame update
@@ -23,7 +21,6 @@ public class S_TorchBehaviour : MonoBehaviour
     {
         torchCharge = 1;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //audioSource = GetComponent<AudioSource>();
 
         flippedTorch.SetActive(false);
         notFlippedTorch.SetActive(false);
@@ -32,9 +29,22 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void Update()
     {
+        isFlipped = this.spriteRenderer.flipX;
+
         if (torchCharge == 0)
         {
             ChargeTorch();
+        }
+
+        if (torchactive && isFlipped)
+        {
+            notFlippedTorch.gameObject.SetActive(false);
+            flippedTorch.gameObject.SetActive(true);
+        }
+        else if (torchactive && !isFlipped)
+        {
+            flippedTorch.gameObject.SetActive(false);
+            notFlippedTorch.gameObject.SetActive(true);
         }
     }
 
@@ -44,29 +54,14 @@ public class S_TorchBehaviour : MonoBehaviour
 
         if (isFlipped == true && torchCharge == 1)
         {
-            FlippedTorch();
-            torchDetector.SetActive(true);
-            torchactive = true;
-        }
-        else if (isFlipped == false && torchCharge == 1)
-        {
-            NotFlippedTorch();
+            Torch();
             torchDetector.SetActive(true);
             torchactive = true;
         }
     }
 
-    void FlippedTorch()
+    void Torch()
     {
-        flippedTorch.SetActive(true);
-
-        Invoke("TorchNotCharged", 5f);
-    }
-
-    void NotFlippedTorch()
-    {
-        notFlippedTorch.SetActive(true);
-
         Invoke("TorchNotCharged", 5f);
     }
 
