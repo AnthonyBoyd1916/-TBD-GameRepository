@@ -13,7 +13,7 @@ public class S_SkipCutscene : MonoBehaviour
     [SerializeField] GameObject preLevel3Cutscene;
     [SerializeField] GameObject postLevel3Cutscene;
     [SerializeField] GameObject endingCutscene;*/
-    [SerializeField] TMPro.TextMeshPro tip;
+    [SerializeField] TMPro.TMP_Text tip;
 
     int prevLevel;
     bool buttonPressed;
