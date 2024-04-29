@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200d86906b354bd4b8de999b450bde7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  postLevel3Cutscene: {fileID: 1037487665}
   tip: {fileID: 769287242}
 --- !u!1 &129175240
 GameObject:
