@@ -4,15 +4,16 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class S_SkipCutscene : MonoBehaviour
 {
-    /*[SerializeField] GameObject openingCutscene;
-    [SerializeField] GameObject postLevel1Cutscene;
-    [SerializeField] GameObject preLevel2Cutscene;
-    [SerializeField] GameObject preLevel3Cutscene;
-    [SerializeField] GameObject postLevel3Cutscene;
-    [SerializeField] GameObject endingCutscene;*/
+    /*[SerializeField] VideoPlayer openingCutscene;
+    [SerializeField] VideoPlayer postLevel1Cutscene;
+    [SerializeField] VideoPlayer preLevel2Cutscene;
+    [SerializeField] VideoPlayer preLevel3Cutscene;*/
+    [SerializeField] VideoPlayer postLevel3Cutscene;
+    //[SerializeField] VideoPlayer endingCutscene;
     [SerializeField] TMPro.TMP_Text tip;
 
     int prevLevel;
@@ -28,15 +29,19 @@ public class S_SkipCutscene : MonoBehaviour
         {
             case 0:
                 //gameObject.SetActive(openingCutscene);
+                //openingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 1:
                 //gameObject.SetActive(postLevel1Cutscene);
+                //postLevel1Cutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 2:
                 //gameObject.SetActive(preLevel3Cutscene);
+                //preLevel3Cutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                 break;
             case 3:
-                //gameObject.SetActive(endingCutscene);
+                gameObject.SetActive(postLevel3Cutscene);
+                postLevel3Cutscene.SetDirectAudioVolume(0,GameManager.Instance.volume);
                 break;
         }
     }
@@ -56,6 +61,7 @@ public class S_SkipCutscene : MonoBehaviour
                 if (!buttonPressed)
                 {
                     //gameObject.SetActive(preLevel2Cutscene);
+                    //preLevel2Cutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                     buttonPressed = true;
                 }
                 else
@@ -75,7 +81,8 @@ public class S_SkipCutscene : MonoBehaviour
             {
                 if(!buttonPressed)
                 {
-                    //gameObject.SetActive(secondCutscenePlayed);
+                    //gameObject.SetActive(endingCutscene);
+                    //endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
                     buttonPressed = true;
                 }
                 else
