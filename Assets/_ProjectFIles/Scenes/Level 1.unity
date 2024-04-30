@@ -27048,7 +27048,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 1d4da6b4b51ba6c499183c6c6f154cb7, type: 3}
+  m_Sprite: {fileID: -683768494, guid: 0261c53c30fcc1b43b5b0262d5df1e63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -30928,6 +30928,7 @@ GameObject:
   - component: {fileID: 2525022310936560948}
   - component: {fileID: 8426524397829125978}
   - component: {fileID: 8426524397829125979}
+  - component: {fileID: 8426524397829125980}
   m_Layer: 0
   m_Name: PC
   m_TagString: Player
@@ -50206,6 +50207,27 @@ MonoBehaviour:
   pauseMenu: {fileID: 960431891}
   isGrounded: 0
   walkInterval: 0.25
+--- !u!95 &8426524397829125980
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296057603997180465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ce503545ee575641aeacad8c59bd768, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &8490184941559086924
 Transform:
   m_ObjectHideFlags: 0
