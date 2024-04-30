@@ -14,11 +14,13 @@ public class A_Monster_In_The_Dark : MonoBehaviour
     [SerializeField] private Transform LeftSpawnPos;
     private bool monsteractive = false, controltimer = true, torchlightflashed = false, monsterinlevel = false, monsterspawned = false;
 
+    private SpriteRenderer spr;
     
     //============================================================================================
     void Start()
     {
         SetRandomTimer();
+        spr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -68,6 +70,17 @@ public class A_Monster_In_The_Dark : MonoBehaviour
             controltimer = true;
             torchlightflashed = false;
             monsteractive = false;
+        }
+
+        //---------------Filps Monster to Face Player---------------//
+        if (monsterinlevel && player.transform.position.x < this.transform.position.x)
+        {
+            spr.flipX = true;
+        }
+
+        else if (monsterinlevel && player.transform.position.x > this.transform.position.x)
+        {
+            spr.flipX = false; 
         }
     }
 
