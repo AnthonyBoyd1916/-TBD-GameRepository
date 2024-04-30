@@ -29,7 +29,7 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void Update()
     {
-        isFlipped = this.spriteRenderer.flipX;
+        isFlipped = spriteRenderer.flipX;
 
         if (torchCharge == 0)
         {
@@ -50,9 +50,7 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void OnUseItem()
     {
-        isFlipped = spriteRenderer.flipX;
-
-        if (isFlipped == true && torchCharge == 1)
+        if (torchCharge == 1)
         {
             Torch();
             torchDetector.SetActive(true);
