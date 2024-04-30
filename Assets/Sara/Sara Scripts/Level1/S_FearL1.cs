@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class S_FearL1 : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera m_Camera;
-    [SerializeField] AudioListener audioListener;
     [SerializeField] float defaultOrthoSize;
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
     [SerializeField] float fearDecreaseAmount = 0.002f; // Editable in the inspector
@@ -32,7 +31,6 @@ public class S_FearL1 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         GameManager.Instance.currentLevel = 1;
-        //audioListener.volume = GameManager.Instance.currentLevel;
 
         torchBehaviour = GetComponent<S_TorchBehaviour>(); // Gets the a reference to the script
 
