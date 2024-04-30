@@ -32,7 +32,7 @@ public class S_FearL1 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         GameManager.Instance.currentLevel = 1;
-        audioListener.volume = GameManager.Instance.currentLevel;
+        //audioListener.volume = GameManager.Instance.currentLevel;
 
         torchBehaviour = GetComponent<S_TorchBehaviour>(); // Gets the a reference to the script
 

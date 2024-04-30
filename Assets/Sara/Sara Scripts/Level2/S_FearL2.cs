@@ -33,7 +33,7 @@ public class S_FearL2 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         headsetBehaviour = GetComponent<S_HeadsetBehaviour>();
-        audioListener.volume = GameManager.Instance.volume;
+        //audioListener.volume = GameManager.Instance.volume;
 
         vignette.intensity.value = vignetteMin;
         vignetteIntensity = vignetteMin;

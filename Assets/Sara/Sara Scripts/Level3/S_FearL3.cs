@@ -36,7 +36,7 @@ public class S_FearL3 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         GameManager.Instance.currentLevel = 3;
-        audioListener.volume = GameManager.Instance.volume;
+        //audioListener.volume = GameManager.Instance.volume;
 
         deathBehaviour = death.GetComponent<S_DeathBehaviour>();
 
