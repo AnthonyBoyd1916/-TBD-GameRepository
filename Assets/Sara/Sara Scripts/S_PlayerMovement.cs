@@ -15,14 +15,14 @@ public class S_PlayerMovement : MonoBehaviour
 
     float sidewaysADInput;
     public bool isGrounded;
-    private Vector2 ladderMovement;
+    private Vector2 ladderMovement, movement;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private PlayerInput playerInput;
     private float normalGravScale;
     private bool onLadder;
 
-    private Animator animator; // Oran's Animator Code
+    private Animator animator; // Oran's and Anthony's Animator Code
 
     private float walkIntervalTimer;
     public float walkInterval = 0.25f;
@@ -35,7 +35,7 @@ public class S_PlayerMovement : MonoBehaviour
         Time.timeScale = 1f;
         playerInput = GetComponent<PlayerInput>();
 
-        animator = GetComponent<Animator>(); // Needed for Oran's Animator code
+        animator = GetComponent<Animator>(); // Needed for Oran's and Anthony's Animator code
     }
 
     void Update()
@@ -55,7 +55,7 @@ public class S_PlayerMovement : MonoBehaviour
         }
 
         #region Oran's Code
-        if (rb.velocity.x != 0f)
+        /*if (rb.velocity.x != 0f)
         {
             animator.SetBool("IsMoving", true);
         }
@@ -71,7 +71,7 @@ public class S_PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("IsJumping", false);
-        }
+        }*/
         #endregion
     }
 
@@ -91,6 +91,40 @@ public class S_PlayerMovement : MonoBehaviour
         {
             rb.MovePosition(rb.position + ladderMovement * moveSpeed * Time.fixedDeltaTime);
         }
+        #region Anthony's Animator
+        movement = rb.velocity;
+
+        if (movement.x != 0)
+        {
+            animator.SetFloat("X", movement.x);
+            animator.SetBool("Moving", true);
+            if (movement.x < 0) { animator.SetBool("Facing Right", false); }
+            else if (movement.x > 0) { animator.SetBool("Facing Right", true); }
+
+            if (isGrounded == true)
+            {
+                animator.SetBool("OnGround", true);
+            }
+            else
+            {
+                animator.SetBool("OnGround", false);
+            }
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+            if (movement.x < 0) { animator.SetBool("Facing Right", false); }
+            else if (movement.x > 0) { animator.SetBool("Facing Right", true); }
+            if (isGrounded == true)
+            {
+                animator.SetBool("OnGround", true);
+            }
+            else
+            {
+                animator.SetBool("OnGround", false);
+            }
+        }
+        #endregion
     }
 
     // Uses Unity Input System
