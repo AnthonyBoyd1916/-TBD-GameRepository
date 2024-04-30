@@ -57,7 +57,6 @@ public class S_FearL1 : MonoBehaviour
             }
 
             fear += fearIncreaseSpeed; // Increases the fear level
-            Debug.Log(fear); // Delete after testing
         }
 
         else if (fear < 1 && torchBehaviour.torchDetector.activeInHierarchy == true)
@@ -90,9 +89,13 @@ public class S_FearL1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) //Added by Anthony
     {
-        if (collision.tag == "Monster" && torchBehaviour.torchactive == false)
+        if (collision.tag == "Monster" && torchBehaviour.torchDetector.activeInHierarchy == false)
         {
             fear = 1;
+        }
+        else if (collision.tag == "Monster" && torchBehaviour.torchDetector.activeInHierarchy == true)
+        {
+            Debug.Log("Monster hit the torch");
         }
     }
 }
