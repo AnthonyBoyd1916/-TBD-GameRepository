@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class S_FearL2 : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera m_Camera;
+    [SerializeField] AudioListener audioListener;
     [SerializeField] float defaultOrthoSize = 9;
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
     [SerializeField] float fearDecreaseAmount = 0.003f; // Editable in the inspector
@@ -32,6 +33,7 @@ public class S_FearL2 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         headsetBehaviour = GetComponent<S_HeadsetBehaviour>();
+        audioListener.volume = GameManager.Instance.volume;
 
         vignette.intensity.value = vignetteMin;
         vignetteIntensity = vignetteMin;

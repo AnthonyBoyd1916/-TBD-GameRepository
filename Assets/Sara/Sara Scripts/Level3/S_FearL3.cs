@@ -12,6 +12,7 @@ public class S_FearL3 : MonoBehaviour
     // Fear script for level 3 
 
     [SerializeField] CinemachineVirtualCamera m_Camera;
+    [SerializeField] AudioListener audioListener;
     [SerializeField] float defaultOrthoSize = 6;
     [SerializeField] float fearIncreaseSpeed = 0.002f; // Editable in the inspector
     [SerializeField] float fearDecreaseSpeed = 0.003f; // Editable in the inspector
@@ -35,6 +36,7 @@ public class S_FearL3 : MonoBehaviour
         globalVolume.profile.TryGet(out vignette);
 
         GameManager.Instance.currentLevel = 3;
+        audioListener.volume = GameManager.Instance.volume;
 
         deathBehaviour = death.GetComponent<S_DeathBehaviour>();
 
