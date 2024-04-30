@@ -125,8 +125,16 @@ public class S_PlayerMovement : MonoBehaviour
 
     private void OnPause()
     {
-        Time.timeScale = 0f;
-        pauseMenu.SetActive(true);
+        if (!pauseMenu.activeInHierarchy)
+        {
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
+        }
+        else if (pauseMenu.activeInHierarchy)
+        {
+            Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
+        }
     }
 
     // From Oran's movement script
