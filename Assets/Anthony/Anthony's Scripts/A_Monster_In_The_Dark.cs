@@ -107,6 +107,9 @@ public class A_Monster_In_The_Dark : MonoBehaviour
         {
             transform.position = LeftSpawnPos.position;
         }
+
+        AudioManager.Instance.PlaySFX("MonsterScream");
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

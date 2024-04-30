@@ -12153,6 +12153,10 @@ MonoBehaviour:
   SfxSounds:
   - name: Walk
     clip: {fileID: 8300000, guid: 475f9ec04224b9e40ae4b01b3677665b, type: 3}
+  - name: MonsterScream
+    clip: {fileID: 8300000, guid: 77f6def6340a603428d0dc32f3bf588f, type: 3}
+  - name: Torch
+    clip: {fileID: 8300000, guid: 76099cecab3b9ce498a4e3271592fdc2, type: 3}
   MusicSource: {fileID: 1843209695}
   SfxSource: {fileID: 1710324300}
 --- !u!4 &984417342
@@ -50406,7 +50410,7 @@ MonoBehaviour:
   gravScaleMultiplier: 3
   pauseMenu: {fileID: 960431891}
   isGrounded: 0
-  walkInterval: 0.25
+  walkInterval: 0.4
 --- !u!95 &8426524397829125980
 Animator:
   serializedVersion: 5
