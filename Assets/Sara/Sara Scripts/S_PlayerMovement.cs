@@ -200,14 +200,14 @@ public class S_PlayerMovement : MonoBehaviour
     // Needed for ladder stuff
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Ladder" && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
+        if (collision.tag == "Stairs" && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
         {
             spriteRenderer.sortingOrder = -1;
             onLadder = true;
             rb.isKinematic = true;
             playerInput.SwitchCurrentActionMap("InLadder");
         }
-        else if (collision.tag == "Stairs")
+        else if (collision.tag == "Ladder" && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
         {
             onLadder = true;
             rb.isKinematic = true;
@@ -218,14 +218,14 @@ public class S_PlayerMovement : MonoBehaviour
     // Needed for ladder stuff
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Ladder")
+        if (collision.tag == "Stairs")
         {
             spriteRenderer.sortingOrder = 2;
             onLadder = false;
             rb.isKinematic = false;
             playerInput.SwitchCurrentActionMap("InGame");
         }
-        else if (collision.tag == "Stairs")
+        else if (collision.tag == "Ladder")
         {
             onLadder = false;
             rb.isKinematic = false;

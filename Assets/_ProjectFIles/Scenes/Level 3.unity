@@ -27210,7 +27210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 2086523471}
-  audioListener: {fileID: 0}
   defaultOrthoSize: 6
   fearIncreaseSpeed: 0.002
   fearDecreaseSpeed: 0.003
