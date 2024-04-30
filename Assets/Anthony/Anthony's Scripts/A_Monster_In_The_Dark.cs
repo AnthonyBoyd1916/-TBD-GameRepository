@@ -23,7 +23,6 @@ public class A_Monster_In_The_Dark : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer = timer - 0.01f;
@@ -99,9 +98,14 @@ public class A_Monster_In_The_Dark : MonoBehaviour
     }
     void TeleportMonster()
     {
-        if(monsterspawned == true)
+        int choice = Random.Range(1, 2);
+        if(monsterspawned == true && choice == 1)
         {
             transform.position = RightSpawnPos.position;
+        }
+        else if (monsterspawned == true && choice == 2)
+        {
+            transform.position = LeftSpawnPos.position;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
