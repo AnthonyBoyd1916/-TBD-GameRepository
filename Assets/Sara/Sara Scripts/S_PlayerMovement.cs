@@ -41,14 +41,14 @@ public class S_PlayerMovement : MonoBehaviour
     void Update()
     {
         //CheckForGround();
-        if (Input.GetKeyDown(KeyCode.D))
+        /*if (Input.GetKeyDown(KeyCode.D))
         {
             spriteRenderer.flipX = false;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
             spriteRenderer.flipX = true;
-        }
+        }*/
         if (Input.GetKeyUp(KeyCode.S))
         {
             rb.gravityScale = normalGravScale;
