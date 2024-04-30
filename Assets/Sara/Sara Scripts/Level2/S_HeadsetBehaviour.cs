@@ -19,13 +19,13 @@ public class S_HeadsetBehaviour : MonoBehaviour
 
     [NonSerialized] public bool musicPlaying = false;
 
-    int batteryLevel = 5;
+    int batteryLevel;
     //int spareBatteries = 0;
 
     private void Start()
     {
         batteryLevelImg.sprite = batteryFull;
-        batteryLevel = 5;
+        batteryLevel = 0;
 
         musicNotes.SetActive(false);
     }
