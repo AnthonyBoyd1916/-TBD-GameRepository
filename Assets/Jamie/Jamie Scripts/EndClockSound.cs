@@ -15,6 +15,13 @@ public class EndClockSound : MonoBehaviour
     void Update()
     {
         this.transform.position = Player.transform.position;
+
+        #region Code to stop it playing if the level is quit - Sara
+        if (GameManager.Instance.currentLevel != 1)
+        {
+            this.enabled = false;
+        }
+        #endregion
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

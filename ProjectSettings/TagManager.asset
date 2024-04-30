@@ -34,6 +34,7 @@ TagManager:
   - Flashlight
   - Monster
   - EndL1Sound
+  - Stairs
   layers:
   - Default
   - TransparentFX

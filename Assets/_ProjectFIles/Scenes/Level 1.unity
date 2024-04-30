@@ -781,11 +781,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1363863920}
-  - {fileID: 1179380146}
   - {fileID: 2045878605}
+  - {fileID: 1179380146}
   - {fileID: 94520986}
+  - {fileID: 1927559698}
   - {fileID: 894519938}
   - {fileID: 1036438299}
+  - {fileID: 1422692860}
   - {fileID: 630871394}
   - {fileID: 517134763}
   - {fileID: 288427926}
@@ -1236,7 +1238,7 @@ GameObject:
   - component: {fileID: 94520988}
   m_Layer: 0
   m_Name: StairCaseTop (1)
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3288,7 +3290,7 @@ GameObject:
   - component: {fileID: 280708501}
   m_Layer: 0
   m_Name: StairCaseTop
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6014,7 +6016,7 @@ GameObject:
   - component: {fileID: 561041012}
   m_Layer: 0
   m_Name: StairCaseLong
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8151,7 +8153,7 @@ GameObject:
   - component: {fileID: 630871396}
   m_Layer: 0
   m_Name: StairCase (3)
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8168,9 +8170,7 @@ Transform:
   m_LocalPosition: {x: 44.333256, y: 28.11, z: 0.34087282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1927559698}
-  - {fileID: 1422692860}
+  m_Children: []
   m_Father: {fileID: 44918246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &630871395
@@ -8921,7 +8921,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.75538635, y: 2.6728888}
+  m_Offset: {x: 0.75538635, y: 5.4882174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8932,7 +8932,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.672882, y: 11.691561}
+  m_Size: {x: 3.672882, y: 6.0609035}
   m_EdgeRadius: 0
 --- !u!61 &708012631
 BoxCollider2D:
@@ -8966,7 +8966,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.1182251, y: 18.675608}
+  m_Offset: {x: -1.1182251, y: 15.705244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8977,7 +8977,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2593994, y: 20.336979}
+  m_Size: {x: 4.2593994, y: 14.396252}
   m_EdgeRadius: 0
 --- !u!1 &709241783
 GameObject:
@@ -10866,7 +10866,7 @@ GameObject:
   - component: {fileID: 894519940}
   m_Layer: 0
   m_Name: StairCase (2)
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12542,7 +12542,7 @@ GameObject:
   - component: {fileID: 1036438301}
   m_Layer: 0
   m_Name: StairCaseTop (2)
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14656,7 +14656,7 @@ GameObject:
   - component: {fileID: 1179380148}
   m_Layer: 0
   m_Name: StairCase
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17603,7 +17603,7 @@ GameObject:
   - component: {fileID: 1422692862}
   m_Layer: 0
   m_Name: StairCaseTop (3)
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17617,11 +17617,11 @@ Transform:
   m_GameObject: {fileID: 1422692859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000019073486, y: 6.550003, z: 0}
+  m_LocalPosition: {x: 44.333275, y: 34.660004, z: 0.34087282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 630871394}
+  m_Father: {fileID: 44918246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1422692861
 SpriteRenderer:
@@ -19807,7 +19807,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4bd8351e18788b44096cf5dc835c8cb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22594,7 +22594,7 @@ GameObject:
   - component: {fileID: 1927559700}
   m_Layer: 0
   m_Name: StairCase (1)
-  m_TagString: Ladder
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22608,11 +22608,11 @@ Transform:
   m_GameObject: {fileID: 1927559697}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6476097, y: -35.83, z: 0}
+  m_LocalPosition: {x: 51.980865, y: -7.720001, z: 0.34087282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 630871394}
+  m_Father: {fileID: 44918246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1927559699
 SpriteRenderer:
@@ -23838,7 +23838,7 @@ GameObject:
   - component: {fileID: 2045878607}
   m_Layer: 0
   m_Name: StairCaseTop
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26803,7 +26803,7 @@ Transform:
   m_GameObject: {fileID: 2500366894022711068}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -2.02, z: 2.0392253}
+  m_LocalPosition: {x: 0.03, y: -3.697, z: 2.0392253}
   m_LocalScale: {x: 1.5094, y: 1.6484969, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27644,8 +27644,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04537916, y: -0.07041073}
-  m_Size: {x: 1.7866011, y: 7.569521}
+  m_Offset: {x: 0.04537916, y: -0.78025556}
+  m_Size: {x: 1.7866011, y: 6.0249934}
   m_Direction: 0
 --- !u!4 &3521086327760616482
 Transform:
@@ -27864,7 +27864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notFlippedTorch: {fileID: 3923794409786490151}
   flippedTorch: {fileID: 2302699458750673594}
-  torchRechargeTime: 12
+  torchRechargeTime: 7
   torchDetector: {fileID: 3685696849328514286}
 --- !u!4 &3832895869433732816
 Transform:
@@ -39113,17 +39113,7 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 23
       m_TileSpriteIndex: 23
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 35, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 23
-      m_TileSpriteIndex: 23
-      m_TileMatrixIndex: 0
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -39793,17 +39783,7 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 31
       m_TileSpriteIndex: 31
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 35, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 31
-      m_TileSpriteIndex: 31
-      m_TileMatrixIndex: 0
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -40473,7 +40453,7 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 31
       m_TileSpriteIndex: 31
-      m_TileMatrixIndex: 0
+      m_TileMatrixIndex: 2
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -40483,7 +40463,7 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 31
       m_TileSpriteIndex: 31
-      m_TileMatrixIndex: 0
+      m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -49916,7 +49896,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6510f975b084c5340bdb266bf90e9825, type: 2}
   - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: fc3aef562894e854f864074957a54006, type: 2}
-  - m_RefCount: 17
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 995bec19aeaa23942aa05d307a7b9056, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -49932,7 +49912,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c7ad51236a231424cbc19e36be5dc596, type: 2}
   - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: 43947dbe98d97514ea0cf42a53e9548e, type: 2}
-  - m_RefCount: 67
+  - m_RefCount: 66
     m_Data: {fileID: 11400000, guid: 01b4f8346556d5f4fa173fe0910e5c9c, type: 2}
   - m_RefCount: 68
     m_Data: {fileID: 11400000, guid: 3bb66bbd6a6a5c142a9b7e7b31a48e4d, type: 2}
@@ -50025,7 +50005,7 @@ Tilemap:
     m_Data: {fileID: 427813714, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
   - m_RefCount: 17
     m_Data: {fileID: 1851793011, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
-  - m_RefCount: 17
+  - m_RefCount: 16
     m_Data: {fileID: 507708421, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1484792454, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
@@ -50041,7 +50021,7 @@ Tilemap:
     m_Data: {fileID: -349869473, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: -1223878265, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
-  - m_RefCount: 67
+  - m_RefCount: 66
     m_Data: {fileID: 1069224068, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
   - m_RefCount: 68
     m_Data: {fileID: 122260702, guid: 1b112c30ad05c3140af824608e2c010f, type: 3}
@@ -50088,7 +50068,7 @@ Tilemap:
   - m_RefCount: 5
     m_Data: {fileID: 1577774274, guid: e7833e4a30553c642aa49c76ae854d91, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 1858
+  - m_RefCount: 1852
     m_Data:
       e00: 1
       e01: 0
@@ -50106,8 +50086,62 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
+  - m_RefCount: 0
+    m_Data:
+      e00: 9.515162e-21
+      e01: 4.9e-44
+      e02: 7.6260243e-32
+      e03: 0
+      e10: 1.98e-43
+      e11: 1e-44
+      e12: 4.5905e-41
+      e13: 0
+      e20: 6.1085e-41
+      e21: 0
+      e22: 9.515149e-21
+      e23: 0
+      e30: 0
+      e31: 7.34684e-40
+      e32: 1.98e-43
+      e33: 1
+  - m_RefCount: 3
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: -1
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  - m_RefCount: 1
+    m_Data:
+      e00: 1.5
+      e01: 0
+      e02: 0
+      e03: -0.75
+      e10: 0
+      e11: 0.9998477
+      e12: -0.017452406
+      e13: 1.9
+      e20: 0
+      e21: 0.017452406
+      e22: 0.9998477
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_TileColorArray:
-  - m_RefCount: 1858
+  - m_RefCount: 1856
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

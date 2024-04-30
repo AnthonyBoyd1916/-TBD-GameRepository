@@ -202,6 +202,13 @@ public class S_PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Ladder" && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
         {
+            spriteRenderer.sortingOrder = -1;
+            onLadder = true;
+            rb.isKinematic = true;
+            playerInput.SwitchCurrentActionMap("InLadder");
+        }
+        else if (collision.tag == "Stairs")
+        {
             onLadder = true;
             rb.isKinematic = true;
             playerInput.SwitchCurrentActionMap("InLadder");
@@ -212,6 +219,13 @@ public class S_PlayerMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Ladder")
+        {
+            spriteRenderer.sortingOrder = 2;
+            onLadder = false;
+            rb.isKinematic = false;
+            playerInput.SwitchCurrentActionMap("InGame");
+        }
+        else if (collision.tag == "Stairs")
         {
             onLadder = false;
             rb.isKinematic = false;

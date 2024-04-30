@@ -9,7 +9,7 @@ public class S_TorchBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject notFlippedTorch;
     [SerializeField] GameObject flippedTorch;
-    [SerializeField] float torchRechargeTime = 10;
+    [SerializeField] float torchRechargeTime = 7;
     [SerializeField] public  GameObject torchDetector;
 
     [NonSerialized]public float torchCharge;
@@ -60,7 +60,7 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void Torch()
     {
-        Invoke("TorchNotCharged", 5f);
+        Invoke("TorchNotCharged", 7f);
     }
 
     void ChargeTorch()
