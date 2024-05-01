@@ -70,7 +70,6 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void ChargeTorch()
     {
-        //audioSource.PlayOneShot(torchWindup);
         torchCharge = 0.5f;
         Debug.Log("You hear a torch winding up");
 

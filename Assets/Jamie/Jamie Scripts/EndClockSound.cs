@@ -19,7 +19,7 @@ public class EndClockSound : MonoBehaviour
         #region Code to stop it playing if the level is quit - Sara
         if (GameManager.Instance.currentLevel != 1)
         {
-            this.enabled = false;
+            Destroy(this);
         }
         #endregion
     }

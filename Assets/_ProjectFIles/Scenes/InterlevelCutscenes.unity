@@ -168,10 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingCutscene: {fileID: 546037826}
-  preLevel2Cutscene: {fileID: 0}
-  preLevel3Cutscene: {fileID: 0}
+  preLevel2Cutscene: {fileID: 530102452}
+  preLevel3Cutscene: {fileID: 570269829}
   postLevel3Cutscene: {fileID: 1037487665}
   tip: {fileID: 769287242}
+  tipBg: {fileID: 1906339073}
 --- !u!1 &129175240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,8 +1014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -23.79132, y: 21.147888}
+  m_SizeDelta: {x: 100.4525, y: 95.1655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1906339075
 MonoBehaviour:
