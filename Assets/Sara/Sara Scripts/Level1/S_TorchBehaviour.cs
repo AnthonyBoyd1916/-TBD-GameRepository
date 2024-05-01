@@ -13,14 +13,12 @@ public class S_TorchBehaviour : MonoBehaviour
     [SerializeField] public  GameObject torchDetector;
 
     [NonSerialized]public float torchCharge;
-    SpriteRenderer spriteRenderer;
     [NonSerialized]public bool isFlipped, torchactive;
 
     // Start is called before the first frame update
     void Start()
     {
         torchCharge = 1;
-        spriteRenderer = GetComponent<SpriteRenderer>();
 
         flippedTorch.SetActive(false);
         notFlippedTorch.SetActive(false);
@@ -29,7 +27,14 @@ public class S_TorchBehaviour : MonoBehaviour
 
     void Update()
     {
-        isFlipped = spriteRenderer.flipX;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            isFlipped = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            isFlipped = false;
+        }
 
         if (torchCharge == 0)
         {
