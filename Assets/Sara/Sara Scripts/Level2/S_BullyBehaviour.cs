@@ -14,12 +14,17 @@ public class S_BullyBehaviour : MonoBehaviour
     private bool headphonesActive; // For allowing the player to bypass the bullies and clowns
     private int layerIgnoreBullies;
     private int layerDefault;
+    private Vector2 movement;
+    private Rigidbody2D rb;
+    private SpriteRenderer sprite;
 
     void Start()
     {
         originalPosition = transform.position; // Sets the original position of the NPC so they know where they were originally
         layerIgnoreBullies = LayerMask.NameToLayer("IgnoreL2Enemies");
         layerDefault = LayerMask.NameToLayer("Default");
+        rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -36,6 +41,15 @@ public class S_BullyBehaviour : MonoBehaviour
         if (playerInRange == true && !headphonesActive) // Is player in their range?
         {
             transform.position = Vector2.MoveTowards(this.transform.position, playerPosition, Time.fixedDeltaTime * bullySpeed); // Moves towards the player at full speed
+            movement = rb.velocity;
+            if (movement.x > 0f)
+            {
+                sprite.flipX = true;
+            }
+            else if (movement.x < 0f)
+            {
+                sprite.flipX = false;
+            }
         }
         if (playerInRange == false || (playerInRange == true && headphonesActive)) // Is player not in their range AND the clown isn't at their orignial position
         {
