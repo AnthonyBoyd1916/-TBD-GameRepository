@@ -35,6 +35,7 @@ TagManager:
   - Monster
   - EndL1Sound
   - Stairs
+  - PictureAura
   layers:
   - Default
   - TransparentFX
