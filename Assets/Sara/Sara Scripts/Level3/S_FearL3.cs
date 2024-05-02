@@ -74,16 +74,13 @@ public class S_FearL3 : MonoBehaviour
         }
         else if (insidePictureAura == true) // Is the player near a picture frame?
         {
-            float minLerpOrthoValue = fearOrthoSize;
-            fearOrthoSize = fearOrthoSize + (defaultOrthoSize * fearDecreaseSpeed);
-            if (fearOrthoSize > defaultOrthoSize)   // If fear ortho size is larger than the the starting size
-            {
-                fearOrthoSize = defaultOrthoSize;   // Set the fear ortho size to be the same as the starting size
-            }
-            float maxLerpOrthoValue = fearOrthoSize;
-            m_Camera.m_Lens.OrthographicSize = Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f);
+            fear -= fearDecreaseSpeed;
 
-            fear -= fearDecreaseSpeed; // Decreases the fear level
+            if (fearOrthoSize < defaultOrthoSize) // Tests if the camera is below default ortho size
+            {
+                fearOrthoSize += ((defaultOrthoSize * fearIncreaseSpeed) * 2); // Changes the ortho size
+                m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Tries to smooth out the change in ortho size
+            }
         }
         else if (fear >= 1)
         {
