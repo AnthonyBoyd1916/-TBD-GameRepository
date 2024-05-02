@@ -111,16 +111,16 @@ public class S_FearL2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (GameManager.Instance.headphonesActive)
+        if (!GameManager.Instance.headphonesActive)
         {
             if (collision.gameObject.tag == "Clown")
             {
-                fear += 1;
+                fear = 1;
                 Debug.Log("Clown Spike"); // Delete after testing
             }
             if (collision.gameObject.tag == "Bully")
             {
-                fear += 1;
+                fear = 1;
                 Debug.Log("Bully Spike"); // Delete after testing
             }
         }
