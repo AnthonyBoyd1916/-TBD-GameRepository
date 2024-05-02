@@ -6,7 +6,10 @@ public class A_Monster_In_The_Dark : MonoBehaviour
 {
     [SerializeField] private float timer = 10f;
     private float chargespeed = 0f;
+    //private Vector2 animatormovement;
     private float randomizedtimer, standintimer = 30f;
+    //private Animator anim;
+    //private Rigidbody2D rb;
     [SerializeField] private float inputspeed;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform IdleSpawnPos;
@@ -21,6 +24,8 @@ public class A_Monster_In_The_Dark : MonoBehaviour
     {
         SetRandomTimer();
         spr = GetComponent<SpriteRenderer>();
+        //anim = GetComponent<Animator>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -59,7 +64,11 @@ public class A_Monster_In_The_Dark : MonoBehaviour
         if (monsterinlevel == true && torchlightflashed == false)
         {
             chargespeed = inputspeed;
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, Time.deltaTime * chargespeed);           
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, Time.deltaTime * chargespeed);
+            //animatormovement = rb.velocity;
+
+            //anim.SetFloat("X", animatormovement.x);
+
         }
         else if (monsterinlevel == true && torchlightflashed == true)
         {
