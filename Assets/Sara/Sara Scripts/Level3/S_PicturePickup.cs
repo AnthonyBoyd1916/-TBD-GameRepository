@@ -12,6 +12,7 @@ public class S_PicturePickup : MonoBehaviour
     [SerializeField] Sprite pictureFragments3;
     [SerializeField] Sprite pictureFragments4;
     [SerializeField] Sprite pictureFragments5;
+    [SerializeField] private GameObject Endblocker;
 
     int pictureFragmentsCollected;
 
@@ -44,6 +45,7 @@ public class S_PicturePickup : MonoBehaviour
                     break;
                 case 5:
                     pictureFragments.GetComponent<Image>().sprite = pictureFragments5;
+                    Endblocker.SetActive(false);
                     break;
                 default:
                     Debug.Log("Picture collected fragments: " + pictureFragmentsCollected);
