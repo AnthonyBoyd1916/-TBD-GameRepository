@@ -33,6 +33,7 @@ public class S_FearL3 : MonoBehaviour
 
         InvokeRepeating("FearIncreaseAmbient", 1.0f, 0.1f);     // Makes the fear increase or decrease every 0.1 seconds.
         globalVolume.profile.TryGet(out vignette);
+        fearOrthoSize = defaultOrthoSize;
 
         GameManager.Instance.currentLevel = 3;
 
