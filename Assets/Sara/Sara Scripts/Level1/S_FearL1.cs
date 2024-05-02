@@ -93,5 +93,9 @@ public class S_FearL1 : MonoBehaviour
         {
             fear = 1;
         }
+        else if(collision.tag == "Battery")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
