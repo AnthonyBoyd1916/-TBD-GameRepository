@@ -59,10 +59,10 @@ public class S_FearL3 : MonoBehaviour
             {
                 if (fear > 0.5 && fearOrthoSize > 5) // Tests if the fear is high enough and the camera is not too close
                 {
-                    float minLerpOrthoValue = fearOrthoSize;
+                    //float minLerpOrthoValue = fearOrthoSize;
                     fearOrthoSize -= (defaultOrthoSize * fearIncreaseSpeed); // Changes the ortho size
-                    float maxLerpOrthoValue = fearOrthoSize;
-                    m_Camera.m_Lens.OrthographicSize = Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f); // Tries to smooth out the change in ortho size
+                    //float maxLerpOrthoValue = fearOrthoSize;
+                    m_Camera.m_Lens.OrthographicSize = fearOrthoSize; // Mathf.Lerp(minLerpOrthoValue, maxLerpOrthoValue, 1f); // Tries to smooth out the change in ortho size
                 }
 
                 fear += fearIncreaseSpeed; // Increases the fear level
