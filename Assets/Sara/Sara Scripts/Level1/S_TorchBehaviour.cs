@@ -74,14 +74,14 @@ public class S_TorchBehaviour : MonoBehaviour
         Debug.Log("You hear a torch winding up");
 
         Invoke("TorchCharged", torchRechargeTime);
-        AudioManager.Instance.PlaySFX("Torch");
+        AudioManager.Instance.PlayTorch("Torch");
     }
 
     void TorchCharged()
     {
         torchCharge = 1;
         Debug.Log("You no longer hear a torch winding up");
-        AudioManager.Instance.SfxSource.Stop();
+        AudioManager.Instance.TorchSource.Stop();
     }
 
     void TorchNotCharged()
