@@ -80,7 +80,7 @@ public class S_SkipCutscene : MonoBehaviour
                 else if (endingCutscene.gameObject.activeInHierarchy == true)
                 {
                     CancelInvoke("LoadCredits");
-                    LoadMainMenu();
+                    LoadCredits();
                 }
             }
         }
@@ -118,7 +118,7 @@ public class S_SkipCutscene : MonoBehaviour
         postLevel3Cutscene.gameObject.SetActive(false);
         endingCutscene.gameObject.SetActive(true);
         endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
-        Invoke("LoadMainMenu", 31f);
+        Invoke("LoadCredits", 31f);
     }
 
     private void LoadLevel1()
