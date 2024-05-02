@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ProjectFIles/Scenes/InterlevelCutscenes.unity
     guid: f3420086ec8ea5f45b2078a5a6c69424
+  - enabled: 1
+    path: Assets/_ProjectFIles/Scenes/Credits.unity
+    guid: cd4e808c9bdcc9b42b126e499aa577ae
   m_configObjects: {}
