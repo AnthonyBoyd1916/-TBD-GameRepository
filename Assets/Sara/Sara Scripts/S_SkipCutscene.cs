@@ -75,11 +75,11 @@ public class S_SkipCutscene : MonoBehaviour
                     postLevel3Cutscene.gameObject.SetActive(false);
                     endingCutscene.gameObject.SetActive(true);
                     endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
-                    Invoke("LoadMainMenu", 31f);
+                    Invoke("LoadCredits", 31f);
                 }
                 else if (endingCutscene.gameObject.activeInHierarchy == true)
                 {
-                    CancelInvoke("LoadMainMenu");
+                    CancelInvoke("LoadCredits");
                     LoadMainMenu();
                 }
             }
@@ -136,8 +136,8 @@ public class S_SkipCutscene : MonoBehaviour
         SceneManager.LoadScene("Level 3");
     }
 
-    private void LoadMainMenu()
+    private void LoadCredits()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Credits");
     }
 }
