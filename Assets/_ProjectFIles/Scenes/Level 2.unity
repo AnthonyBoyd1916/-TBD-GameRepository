@@ -47918,8 +47918,10 @@ MonoBehaviour:
   SfxSounds:
   - name: Walk
     clip: {fileID: 8300000, guid: 9eb1e5e85f2bfe94b8dd31bb60d1e1ff, type: 3}
+  TorchSound: []
   MusicSource: {fileID: 1587992577}
   SfxSource: {fileID: 177160867}
+  TorchSource: {fileID: 0}
 --- !u!4 &559574362
 Transform:
   m_ObjectHideFlags: 0
