@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] MusicSounds, SfxSounds;
-    public AudioSource MusicSource, SfxSource;
+    public Sound[] MusicSounds, SfxSounds, TorchSound;
+    public AudioSource MusicSource, SfxSource, TorchSource;
     private GameObject circusMusic; // For the quiet code
     private AudioSource circusMusicSource; // For the quiet code
 
@@ -96,6 +96,21 @@ public class AudioManager : MonoBehaviour
         else
         {
             SfxSource.PlayOneShot(s.clip);
+        }
+    }
+
+    public void PlayTorch(string name)
+    {
+        Sound s = Array.Find(TorchSound, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            TorchSource.PlayOneShot(s.clip);
         }
     }
 

@@ -12,20 +12,17 @@ public class S_SkipCutscene : MonoBehaviour
     [SerializeField] VideoPlayer preLevel2Cutscene;
     [SerializeField] VideoPlayer preLevel3Cutscene;
     [SerializeField] VideoPlayer postLevel3Cutscene;
-    //[SerializeField] VideoPlayer endingCutscene;
+    [SerializeField] VideoPlayer endingCutscene;
     [SerializeField] TMPro.TMP_Text tip;
     [SerializeField] GameObject tipBg;
 
     int prevLevel;
-    bool buttonPressed;
-
 
     void Start()
     {
         tip.gameObject.SetActive(false);
         tipBg.SetActive(false);
         prevLevel = GameManager.Instance.currentLevel;
-        buttonPressed = false;
         switch (prevLevel)
         {
             case 0:
@@ -72,16 +69,17 @@ public class S_SkipCutscene : MonoBehaviour
             }
             else if (prevLevel == 3)
             {
-                if(!buttonPressed)
+                if (endingCutscene.gameObject.activeInHierarchy == false)
                 {
                     CancelInvoke("PlayEndingCutscene");
                     postLevel3Cutscene.gameObject.SetActive(false);
-                    //endingCutscene.gameObject.SetActive(true);
-                    //endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
-                    buttonPressed = true;
+                    endingCutscene.gameObject.SetActive(true);
+                    endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
+                    Invoke("LoadMainMenu", 31f);
                 }
-                else
+                else if (endingCutscene.gameObject.activeInHierarchy == true)
                 {
+                    CancelInvoke("LoadMainMenu");
                     LoadMainMenu();
                 }
             }
@@ -118,8 +116,9 @@ public class S_SkipCutscene : MonoBehaviour
     private void PlayEndingCutscene()
     {
         postLevel3Cutscene.gameObject.SetActive(false);
-        //endingCutscene.gameObject.SetActive(true);
-        //endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
+        endingCutscene.gameObject.SetActive(true);
+        endingCutscene.SetDirectAudioVolume(0, GameManager.Instance.volume);
+        Invoke("LoadMainMenu", 31f);
     }
 
     private void LoadLevel1()
