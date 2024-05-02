@@ -71,20 +71,13 @@ public class S_TorchBehaviour : MonoBehaviour
     void ChargeTorch()
     {
         torchCharge = 0.5f;
-        Debug.Log("You hear a torch winding up");
-
         Invoke("TorchCharged", torchRechargeTime);
-        AudioManager.Instance.TorchSource.Play();
-        //AudioManager.Instance.TorchSource.UnPause();
+        AudioManager.Instance.PlayTorch("Torch");
     }
 
     void TorchCharged()
     {
         torchCharge = 1;
-        Debug.Log("You no longer hear a torch winding up");
-        AudioManager.Instance.TorchSource.Stop();
-        //AudioManager.Instance.TorchSource.Pause();
-
     }
 
     void TorchNotCharged()

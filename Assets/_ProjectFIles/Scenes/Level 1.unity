@@ -1598,7 +1598,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.524
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12500,7 +12500,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 77f6def6340a603428d0dc32f3bf588f, type: 3}
   TorchSound:
   - name: Torch
-    clip: {fileID: 8300000, guid: 76099cecab3b9ce498a4e3271592fdc2, type: 3}
+    clip: {fileID: 8300000, guid: ea273c82c9288924a9d5df20bdc8a9b3, type: 3}
   MusicSource: {fileID: 1843209695}
   SfxSource: {fileID: 1710324300}
   TorchSource: {fileID: 142359100}
