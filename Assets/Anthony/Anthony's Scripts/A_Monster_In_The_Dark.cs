@@ -6,7 +6,7 @@ public class A_Monster_In_The_Dark : MonoBehaviour
 {
     [SerializeField] private float timer = 10f;
     private float chargespeed = 0f;
-    private float randomizedtimer, standintimer = 50f;
+    private float randomizedtimer, standintimer = 30f;
     [SerializeField] private float inputspeed;
     [SerializeField] private GameObject player;
     [SerializeField] private Transform IdleSpawnPos;
