@@ -80861,7 +80861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb98d94a228f9a4eae373c7cccea51a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpStregth: 25
+  jumpStregth: 13
   moveSpeed: 10
   groundCheckDimensions: {fileID: 536548077054847710}
   platformLayer:
