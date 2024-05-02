@@ -99,14 +99,14 @@ public class A_Monster_In_The_Dark : MonoBehaviour
     void TeleportMonster()
     {
         int choice = Random.Range(1, 2);
-        if(monsterspawned == true && choice == 1)
-        {
+        /*if(monsterspawned == true && choice == 1)
+        {*/
             transform.position = RightSpawnPos.position;
-        }
+        /*}
         else if (monsterspawned == true && choice == 2)
         {
             transform.position = LeftSpawnPos.position;
-        }
+        }*/
 
         AudioManager.Instance.PlaySFX("MonsterScream");
 
