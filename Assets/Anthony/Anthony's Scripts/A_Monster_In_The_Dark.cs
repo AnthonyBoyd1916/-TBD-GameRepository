@@ -23,9 +23,9 @@ public class A_Monster_In_The_Dark : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        timer = timer - 0.01f;
+        timer = timer - 0.02f;
         if (timer <= 0f)
         {
             monsteractive = true;
