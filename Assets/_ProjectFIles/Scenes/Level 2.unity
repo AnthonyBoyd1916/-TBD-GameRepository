@@ -57251,7 +57251,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11796558, y: -0.08067754}
+  m_Offset: {x: 0.11796558, y: -0.12392746}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -57262,7 +57262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7383529, y: 0.84404963}
+  m_Size: {x: 0.7383529, y: 0.75754976}
   m_EdgeRadius: 0
 --- !u!212 &558870102
 SpriteRenderer:
@@ -71961,10 +71961,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -76824,7 +76824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 12589e0e3ac092d4e8e371f6229cc9b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bafc6206acf8e7458e46b5765458d0a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77015,7 +77015,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11248541, y: -0.07932019}
+  m_Offset: {x: 0.11248541, y: -0.12011811}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -77026,7 +77026,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7510376, y: 0.80280375}
+  m_Size: {x: 0.7510376, y: 0.7212079}
   m_EdgeRadius: 0
 --- !u!212 &1058835827
 SpriteRenderer:
@@ -90124,8 +90124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1820, y: 980}
+  m_AnchoredPosition: {x: -15.6906, y: 25.4971}
+  m_SizeDelta: {x: 2243.6453, y: 1478.1755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460325088
 MonoBehaviour:
@@ -93431,10 +93431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -124476,7 +124476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3328004092689752550, guid: 5cdc66dd8a78d0a4b862414291107983, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.2
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 3328004092689752550, guid: 5cdc66dd8a78d0a4b862414291107983, type: 3}
       propertyPath: m_LocalPosition.y
